@@ -1,6 +1,6 @@
 import '../componentstyles/MainPage.css';
 
-const MainPage = () => {
+const Mainpage = () => {
     return (
         <div>
             <div className="carousalContainer">
@@ -45,5 +45,5 @@ const MainPage = () => {
     )
 }
 
-export default MainPage;
+export default Mainpage;
 

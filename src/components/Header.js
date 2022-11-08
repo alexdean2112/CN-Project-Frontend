@@ -4,7 +4,6 @@ const Header = () => {
     return (
         <div id = "header">
             <img id="banner" alt = "header" src ={require("../assets/banner.png")}></img>
-
             <div className="navbar">
                 <div className="dropdown">
                     <button className="dropbtn">PLACEHOLDER</button>

@@ -3,7 +3,7 @@ import "../componentstyles/Header.css"
 const Header = () => {
     return (
         <div id = "header">
-            <img alt = "header" src ={require("../assets/banner.png")}></img>
+            <img id="banner" alt = "header" src ={require("../assets/banner.png")}></img>
 
             <div class="navbar">
                 <a href="index.html">Home</a>

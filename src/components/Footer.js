@@ -2,7 +2,7 @@ import twitLogob from "../assets/twitlogob.png";
 import faceLogob from "../assets/facelogob.png";
 import instaLogob from "../assets/instalogob.png";
 import barrybee from "../assets/barrybee.png";
-import "../componentstyles/Footer.css";
+import "../componentstyles/footer.css";
 
 const Footer = () => {
   return (

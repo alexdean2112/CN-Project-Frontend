@@ -1,12 +1,12 @@
-import twitLogob from '../components/images'
-import faceLogob from '../components/images'
-import instaLogob from '../components/images'
-import barrybee from '../components/images'
+import twitLogob from '../assets/twitlogob.png'
+import faceLogob from '../assets/facelogob.png'
+import instaLogob from '../assets/instalogob.png'
+import barrybee from '../assets/barrybee.png'
 
 const BeesFooter = () => {
     return (
-        <div>
-            <div className="BarryBee"><img src={barrybee}/></div>
+        <div className="FooterFull">
+            <div className="BarryBee"><img src={barrybee} alt="Barry B. Benson from A Bee Movie"/></div>
 
             <div className="BeesFooter">
                 <div className="FooterCards">
@@ -20,7 +20,7 @@ const BeesFooter = () => {
                     </div>
                 </div>
                 <div className="BeesServices">
-                    <div className="BeesHelpTitle"><u><strong>Cat Services</strong></u></div>
+                    <div className="BeesHelpTitle"><u><strong>Bee's Services</strong></u></div>
                     <div className="BeesHelp2">
                         <div>API</div>
                         <div>Sell on The Bee's Knees</div>

@@ -1,6 +1,3 @@
-
-
-
 const Header = () => {
     return (
         <div id = "header">
@@ -8,5 +5,4 @@ const Header = () => {
         </div>
     )
 }
-
 export default Header;

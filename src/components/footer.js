@@ -1,10 +1,12 @@
 import twitLogob from '../components/images'
 import faceLogob from '../components/images'
 import instaLogob from '../components/images'
+import barrybee from '../components/images'
 
 const BeesFooter = () => {
     return (
         <div>
+            <div className="BarryBee"><img src={barrybee}/></div>
             <div className="BeesFooter">
                 <div className="FooterCards">
                 <div className="FooterLinks">
@@ -39,6 +41,8 @@ const BeesFooter = () => {
                 </div>
                 </div>
             </div>
+            <div className="Copyright">© 2022 thebeesknees.net. All Rights Reserved</div>
+            <div className="Protections">This site is protected by reCAPTCHA and Joe Mama's Privacy Policy</div>
         </div>
     )
 }

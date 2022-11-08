@@ -4,7 +4,7 @@ import instaLogob from "../assets/instalogob.png";
 import barrybee from "../assets/barrybee.png";
 import "../componentstyles/Footer.css";
 
-const BeesFooter = () => {
+const Footer = () => {
   return (
     <footer className="FooterFull">
       <div className="wrapper_footer_top">
@@ -76,4 +76,4 @@ const BeesFooter = () => {
   );
 };
 
-export default BeesFooter;
+export default Footer;

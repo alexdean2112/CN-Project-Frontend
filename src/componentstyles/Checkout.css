@@ -1,7 +1,27 @@
+h1{
+    margin-left: 5%;
+    margin-bottom: 3%;
+    margin-top: 3%;
+    text-decoration: underline;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+h4{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+p{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+button{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
 .outer-box{
     margin: auto;
     border-radius: 8%;
-    width: 66%;
+    width: 77%;
     background-color: rgba(120, 120, 120, 0.628);
 }
 
@@ -47,6 +67,7 @@
     padding-right: 7%;
     border-radius: 33%;
     background-image: url(../assets/background_texture.png);
+    cursor: pointer;
 }
 
 #vert-line{

@@ -14,12 +14,12 @@ function App() {
   // const [user, setUser] = useState();
   return (
     <div className="App">
-      <Checkout />
       {/* <Register setter={setUser} />
       <Login setter={setUser} /> */}
       <Header />
-      <GameBody />
-      <Mainpage />
+      {/* <GameBody />
+      <Mainpage /> */}
+      <Checkout />
       <Footer />
     </div>
   );

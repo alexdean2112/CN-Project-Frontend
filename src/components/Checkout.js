@@ -1,6 +1,6 @@
 import "../componentstyles/Checkout.css";
 
-// This will need to be mapped later on????? All placeholder at the moment
+// This will need to be mapped later on?????
 
 const Checkout = () => {
   return (

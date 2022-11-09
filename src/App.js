@@ -6,6 +6,7 @@ import GameBody from "./components/GameBody";
 import Mainpage from "./components/Mainpage";
 import Profile from "./components/Profile";
 import Footer from "./components/Footer";
+import GameCard from "./components/GameCard"
 import "./App.css";
 // import { useState } from "react";
 
@@ -16,6 +17,7 @@ function App() {
       {/* <Register setter={setUser} />
       <Login setter={setUser} /> */}
       <Header />
+      <GameCard />
       <GameBody />
       <Mainpage />
       <Profile />

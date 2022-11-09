@@ -7,7 +7,6 @@ import Mainpage from "./components/Mainpage";
 import Profile from "./components/Profile";
 import Footer from "./components/Footer";
 import "./App.css";
-import "./componentstyles/GameBody.css";
 // import { useState } from "react";
 
 function App() {

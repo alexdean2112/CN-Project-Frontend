@@ -12,3 +12,9 @@
   background-image: url("../assets/background_texture.png");
   color: black;
 }
+
+.basket_border_bottom {
+  height: auto;
+  width: 30vh;
+  background-color: black;
+}

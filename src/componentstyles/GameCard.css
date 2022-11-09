@@ -1,0 +1,24 @@
+
+
+.gamecontainer {
+    display: flex;
+    align-items:center;
+    background-color: #6d8b85;
+    width: 35vw;
+    height: 25vh;
+    margin-left:15vw;
+    margin-top:10vh;
+    margin-top:6vh;
+    margin-right:3vw;
+    box-shadow:3px 3px black;
+    position: relative;
+    top: 0;
+    transition: top ease 0.5s;
+    border-style: solid;
+    border-width: 1px;
+}
+
+#gamecover {
+    height: 20vh;
+    padding-left: 1vw;
+}

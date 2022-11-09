@@ -3,7 +3,7 @@ import GameBody from "./components/GameBody"
 import Mainpage from "./components/Mainpage"
 import Footer from "./components/Footer";
 import './App.css';
-import './componentstyles/GameBody.css'
+// import './componentstyles/GameBody.css'
 
 function App() {
   return (

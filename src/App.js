@@ -10,11 +10,10 @@ import GameCard from "./components/GameCard"
 // import Checkout from "./components/Checkout";
 
 import "./App.css";
-import "./componentstyles/GameBody.css";
-ct";
 
 function App() {
    //const [user, setUser] = useState();
+
   return (
     <div className="App">
       {/* <Register setter={setUser} />

@@ -1,16 +1,21 @@
+/* Comments are all required code for register/login + commented out checkout*/
+
+// import {Register, Login} from "./components/Register";
 import Header from "./components/Header";
 import GameBody from "./components/GameBody";
 import Mainpage from "./components/Mainpage";
+import Profile from "./components/Profile";
 import Footer from "./components/Footer";
-import Basket from "./components/Basket";
+// import Checkout from "./components/Checkout";
 import "./App.css";
-import "./componentstyles/GameBody.css";
-import { useState } from "react";
 
 function App() {
-  const [show, setShow] = useState(false);
+   //const [user, setUser] = useState();
+
   return (
     <div className="App">
+      {/* <Register setter={setUser} />
+      <Login setter={setUser} /> */}
       <Header />
       <Basket show={show} />
       <button id="StyledButton" onClick={() => setShow(!show)}>
@@ -18,6 +23,7 @@ function App() {
       </button>
       <GameBody />
       <Mainpage />
+      <Profile />
       <Footer />
     </div>
   );

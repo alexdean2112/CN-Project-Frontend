@@ -1,0 +1,53 @@
+body {
+    background-image: url(../assets/background_texture.png);
+}
+.carousalContainer{
+    display: flex;
+    justify-content: center;
+}
+.carousal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 95vw;
+    height: 40vh;
+    border: solid 5px black;
+    margin-top: 20px;
+}
+.categories{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 15px;
+}
+.category {
+    display: flex;
+    border: solid 1px black;
+    background-color: rgb(0, 0, 0, 0.4);
+    color: white;
+    justify-content: center;
+    align-items: center;
+    width: 15vw;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.randomGames{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-bottom: 20px;
+}
+.randomGame{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(0, 0, 0, 0.4);
+    border: solid 1px rgb(0, 0, 0);
+    color: white;
+    height: 15vh;
+    width: 30vw;
+    border-radius: 10px;
+}

@@ -6,7 +6,9 @@ import GameBody from "./components/GameBody";
 import Mainpage from "./components/Mainpage";
 import Profile from "./components/Profile";
 import Footer from "./components/Footer";
+import GameCard from "./components/GameCard"
 // import Checkout from "./components/Checkout";
+
 import "./App.css";
 
 function App() {
@@ -17,10 +19,7 @@ function App() {
       {/* <Register setter={setUser} />
       <Login setter={setUser} /> */}
       <Header />
-      <Basket show={show} />
-      <button id="StyledButton" onClick={() => setShow(!show)}>
-        Show/Hide Cart
-      </button>
+      <GameCard />
       <GameBody />
       <Mainpage />
       <Profile />

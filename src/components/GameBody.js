@@ -1,4 +1,4 @@
-import "./componentstyles/GameBody.css";
+import "../componentstyles/GameBody.css";
 
 const GameBody = ({title,genre,price,rating}) =>{
     return (

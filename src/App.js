@@ -6,10 +6,9 @@ import GameBody from "./components/GameBody";
 import Mainpage from "./components/Mainpage";
 import Profile from "./components/Profile";
 import Footer from "./components/Footer";
-import GameCard from "./components/GameCard"
-// import Checkout from "./components/Checkout";
+import './App.css';
 
-import "./App.css";
+
 
 function App() {
    //const [user, setUser] = useState();

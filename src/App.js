@@ -6,6 +6,7 @@ import GameBody from "./components/GameBody";
 import Mainpage from "./components/Mainpage";
 import Profile from "./components/Profile";
 import Footer from "./components/Footer";
+import SearchBody from "./components/SearchBody";
 import './App.css';
 
 
@@ -20,6 +21,7 @@ function App() {
       <Header />
       <GameCard />
       <GameBody />
+      <SearchBody />
       <Mainpage />
       <Profile />
       <Footer />

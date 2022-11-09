@@ -1,0 +1,43 @@
+.outer-box{
+    margin: auto;
+    border: thin solid grey;
+    width: 66%;
+}
+
+.inner-box-upper{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 3%;
+    margin: auto;
+    border: thin solid green;
+}
+
+.inner-box-lower{
+    display: flex;
+    flex-direction: column;
+    margin-top: 2%;
+    border: thin solid red;
+}
+
+.top-text{
+    display: flex;
+    justify-content: space-around;
+}
+
+#center{
+    display: flex;
+    justify-content: center;
+}
+
+#purchase{
+    display: flex;
+    justify-content: flex-end;
+    padding: 2%;
+}
+
+#padded-button{
+    padding: 2%;
+    padding-left: 7%;
+    padding-right: 7%;
+}

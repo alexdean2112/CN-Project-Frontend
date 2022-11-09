@@ -1,5 +1,6 @@
 import '../componentstyles/GameBody.css'
 
+
 const GameBody = ({title,genre,price,rating}) =>{
     return (
         <div id = "gamebody">

@@ -1,7 +1,8 @@
 .outer-box{
     margin: auto;
-    border: thin solid grey;
+    border-radius: 8%;
     width: 66%;
+    background-color: rgba(120, 120, 120, 0.628);
 }
 
 .inner-box-upper{
@@ -10,14 +11,18 @@
     align-items: center;
     padding: 3%;
     margin: auto;
-    border: thin solid green;
+}
+
+#thin-line{
+    display: flex;
+    border: 0.5px solid black;
+    opacity: 40%;
 }
 
 .inner-box-lower{
     display: flex;
     flex-direction: column;
     margin-top: 2%;
-    border: thin solid red;
 }
 
 .top-text{
@@ -40,4 +45,13 @@
     padding: 2%;
     padding-left: 7%;
     padding-right: 7%;
+    border-radius: 33%;
+    background-image: url(../assets/background_texture.png);
+}
+
+#vert-line{
+    display: flex;
+    border: 0.5px solid black;
+    height: 50px;
+    opacity: 40%;
 }

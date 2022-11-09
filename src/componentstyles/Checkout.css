@@ -1,8 +1,46 @@
+h1{
+    margin-left: 5%;
+    margin-bottom: 3%;
+    margin-top: 3%;
+    text-decoration: underline;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+h4{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+p{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+button{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background: #ffe600;
+    border-radius: 999px;
+    box-shadow: #08080b 0 10px 20px -10px;
+    box-sizing: border-box;
+    color: #000000;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 24px;
+    opacity: 1;
+    outline: 0 solid transparent;
+    padding: 10px 20px;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    width: fit-content;
+    word-break: break-word;
+    border: 0;
+}
+
 .outer-box{
     margin: auto;
-    border-radius: 8%;
-    width: 66%;
+    width: 77%;
     background-color: rgba(120, 120, 120, 0.628);
+    box-shadow: #08080b 0 10px 20px -10px;
 }
 
 .inner-box-upper{
@@ -39,14 +77,6 @@
     display: flex;
     justify-content: flex-end;
     padding: 2%;
-}
-
-#padded-button{
-    padding: 2%;
-    padding-left: 7%;
-    padding-right: 7%;
-    border-radius: 33%;
-    background-image: url(../assets/background_texture.png);
 }
 
 #vert-line{

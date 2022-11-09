@@ -1,5 +1,7 @@
 import "../componentstyles/Checkout.css";
 
+// This will need to be mapped later on?????
+
 const Checkout = () => {
   return (
     <div>
@@ -20,7 +22,7 @@ const Checkout = () => {
           </div>
           <p id="center">To finalise your order, select purchase below.</p>
           <div id="purchase">
-            <button id="padded-button"><u>Purchase item(s)</u></button>
+            <button id="padded-button">CHECKOUT</button>
           </div>
         </div>
       </div>

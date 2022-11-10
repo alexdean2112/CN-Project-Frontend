@@ -25,7 +25,7 @@ const HomePage = () => {
     } else {
       navigate("/");
     }
-  }, []);
+  }, [navigate]);
 
   return (
     <div>

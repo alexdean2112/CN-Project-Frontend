@@ -28,7 +28,7 @@ export const Register = ({ setter }) => {
     } else {
       navigate("/");
     }
-  }, []);
+  }, [navigate]);
 
   const submitHandler = async (e) => {
     e.preventDefault();

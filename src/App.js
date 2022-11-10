@@ -10,10 +10,7 @@ import CheckoutPage from './components/CheckoutPage';
 import GamePage from './components/GamePage';
 import SearchPage from './components/SearchPage';
 
-
-
 function App() {
-   //const [user, setUser] = useState();
 
   return (
     <Routes>

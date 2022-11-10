@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { createUser, loginUser } from "../utils/userUtils";
+import "../componentstyles/Register.css";
 
 export const Register = ({ setter }) => {
   const [username, setUsername] = useState();
@@ -14,17 +15,17 @@ export const Register = ({ setter }) => {
   return (
     <form onSubmit={submitHandler}>
       <label>
-        Username:
+        Username
         <input onChange={(e) => setUsername(e.target.value)} />
       </label>
 
       <label>
-        Email:
+        Email
         <input onChange={(e) => setEmail(e.target.value)} />
       </label>
 
       <label>
-        Password:
+        Password
         <input onChange={(e) => setPassword(e.target.value)} />
       </label>
 
@@ -46,24 +47,25 @@ export const Login = ({ setter }) => {
 
   return (
     <form onSubmit={submitHandler}>
+      <br />
       <label>
-        Username:
+        Username
         <input onChange={(event) => setUsername(event.target.value)} />
       </label>
-      <br></br>
 
       <label>
-        Email:
+        Email
         <input onChange={(event) => setEmail(event.target.value)} />
       </label>
-      <br></br>
 
       <label>
-        Password:
+        Password
         <input onChange={(event) => setPassword(event.target.value)} />
       </label>
-      <br></br>
-      <button type="submit">Login</button>
+
+      <button type="submit">
+        Login
+      </button>
     </form>
   );
 };

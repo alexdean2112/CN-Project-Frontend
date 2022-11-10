@@ -1,25 +1,29 @@
-/* Comments are all required code for register/login*/
+/* Comments are all required code for register/login + commented out checkout*/
 
 // import {Register, Login} from "./components/Register";
-import Header from "./components/Header";
-import GameBody from "./components/GameBody";
-import Mainpage from "./components/Mainpage";
-import Footer from "./components/Footer";
-import "./App.css";
-import "./componentstyles/GameBody.css";
-import { useState } from "react";
+import './App.css';
+import { Routes, Route } from "react-router-dom";
+import LoginPage from "./components/LoginPage";
+import HomePage from './components/HomePage';
+import ProfilePage from './components/ProfilePage';
+import CheckoutPage from './components/CheckoutPage';
+import GamePage from './components/GamePage';
+import SearchPage from './components/SearchPage';
+
+
 
 function App() {
-  // const [user, setUser] = useState();
+   //const [user, setUser] = useState();
+
   return (
-    <div className="App">
-      {/* <Register setter={setUser} />
-      <Login setter={setUser} /> */}
-      <Header />
-      <GameBody />
-      <Mainpage />
-      <Footer />
-    </div>
+    <Routes>
+      <Route path="/" element={<LoginPage />} />
+      <Route path="/home" element={<HomePage />} />
+      <Route path="/profile" element={<ProfilePage />} />
+      <Route path="/checkout" element={<CheckoutPage />} />
+      <Route path="/game" element={<GamePage />} />
+      <Route path="/search" element={<SearchPage />} />
+    </Routes>
   );
 }
 

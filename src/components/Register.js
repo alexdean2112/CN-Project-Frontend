@@ -1,15 +1,22 @@
 import { useState } from "react";
 import { createUser, loginUser } from "../utils/userUtils";
 import "../componentstyles/Register.css";
+import { useNavigate } from "react-router-dom";
 
 export const Register = ({ setter }) => {
   const [username, setUsername] = useState();
   const [email, setEmail] = useState();
   const [password, setPassword] = useState();
+  const navigate = useNavigate();
 
   const submitHandler = async (e) => {
     e.preventDefault();
-    await createUser(username, email, password, setter);
+    const data = await createUser(username, email, password, setter);
+    if (data.token) {
+      navigate("/home");
+    } else {
+      console.log("User details knackered.");
+    }
   };
 
   return (
@@ -38,11 +45,16 @@ export const Login = ({ setter }) => {
   const [username, setUsername] = useState();
   const [email, setEmail] = useState();
   const [password, setPassword] = useState();
+  const navigate = useNavigate();
 
   const submitHandler = async (event) => {
     event.preventDefault();
-    await loginUser(username, email, password, setter);
-    console.log(`Logged in as ${username}`);
+    const data = await loginUser(username, email, password, setter);
+    if (data.token) {
+      navigate("/home");
+    } else {
+      console.log("User details knackered.");
+    }
   };
 
   return (
@@ -63,9 +75,7 @@ export const Login = ({ setter }) => {
         <input onChange={(event) => setPassword(event.target.value)} />
       </label>
 
-      <button type="submit">
-        Login
-      </button>
+      <button type="submit">Login</button>
     </form>
   );
 };

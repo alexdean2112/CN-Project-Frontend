@@ -5,7 +5,7 @@ import { useEffect } from "react";
 import { writeCookie, getCookie } from "../common";
 import { useNavigate } from "react-router-dom";
 
-const ProfilePage = () => {
+const ProfilePage = ({ setter, user }) => {
   const navigate = useNavigate();
   useEffect(() => {
     const getUser = async () => {
@@ -28,7 +28,7 @@ const ProfilePage = () => {
   }, [navigate]);
   return (
     <div>
-      <Header />
+      <Header user={user} setter={setter} />
       <Profile />
       <Footer />
     </div>

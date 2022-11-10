@@ -5,7 +5,7 @@ import { useEffect } from "react";
 import { writeCookie, getCookie } from "../common";
 import { useNavigate } from "react-router-dom";
 
-const CheckoutPage = () => {
+const CheckoutPage = ({ setter, user }) => {
   const navigate = useNavigate();
   useEffect(() => {
     const getUser = async () => {
@@ -28,7 +28,7 @@ const CheckoutPage = () => {
   }, [navigate]);
   return (
     <div>
-      <Header />
+      <Header setter={setter} />
       <Checkout />
       <Footer />
     </div>

@@ -1,35 +1,46 @@
-import "../componentstyles/Header.css"
+import "../componentstyles/Header.css";
+import { useNavigate } from "react-router-dom";
 
-const Header = () => {
-    return (
-        <div id = "header">
-            <img id="banner" alt = "header" src ={require("../assets/banner.png")}></img>
+const Header = ({ setter, user }) => {
+    const navigate = useNavigate();
 
-            <div className="navbar">
-                <div className="dropdown">
-                    <button className="dropbtn">Most Popular</button>
-                </div>
-                <div className="dropdown">
-                    <button className="dropbtn">Latest Games</button>
-                </div>
-                <div className="dropdown">
-                    <button className="dropbtn">Special Offers</button>
-                </div>
-                <div id="rightside">
-                    <p id = "loggeduser">Welcome USER</p>
-                    <div className="dropdown">
-                        <img alt = "profile" id ="profile" src ={require("../assets/profile.png")} />
-                            <div className="dropdown-content">
-                                <button>Edit Profile</button>
-                                <button>Logout</button>
-                            </div>
-                    </div>
-                </div>
-            </div>
+  const logoutHandler = () => {
+    document.cookie = "jwt_token=; path=/; Expires=Thu, 01 Jan 1970 00:00:00 UTC;";
+    navigate("/");
+    setter("");
+  };
+
+  return (
+    <div id="header">
+      <img id="banner" alt="header" src={require("../assets/banner.png")}></img>
+
+      <div className="navbar">
+        <div className="dropdown">
+          <button className="dropbtn">Most Popular</button>
         </div>
-    )
-}
+        <div className="dropdown">
+          <button className="dropbtn">Latest Games</button>
+        </div>
+        <div className="dropdown">
+          <button className="dropbtn">Special Offers</button>
+        </div>
+        <div id="rightside">
+          <p id="loggeduser">{`Welcome USER`}</p>
+          <div className="dropdown">
+            <img
+              alt="profile"
+              id="profile"
+              src={require("../assets/profile.png")}
+            />
+            <div className="dropdown-content">
+              <button>Edit Profile</button>
+              <button onClick={logoutHandler}>Logout</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
 
 export default Header;
-
-

@@ -20,7 +20,8 @@ const Header = () => {
                     <div className="dropdown">
                         <img alt = "profile" id ="profile" src ={require("../assets/profile.png")} />
                             <div className="dropdown-content">
-                                <p>PLACEHOLDER</p>
+                                <button>Edit Profile</button>
+                                <button>Logout</button>
                             </div>
                     </div>
                 </div>

@@ -6,8 +6,12 @@ import GameBody from "./components/GameBody";
 import Mainpage from "./components/Mainpage";
 import Profile from "./components/Profile";
 import Footer from "./components/Footer";
-// import Checkout from "./components/Checkout";
-import "./App.css";
+import SearchBody from "./components/SearchBody";
+import GameCard from "./components/GameCard";
+import Basket from "./components/Basket";
+import './App.css';
+
+
 
 function App() {
    //const [user, setUser] = useState();
@@ -17,11 +21,10 @@ function App() {
       {/* <Register setter={setUser} />
       <Login setter={setUser} /> */}
       <Header />
-      <Basket show={show} />
-      <button id="StyledButton" onClick={() => setShow(!show)}>
-        Show/Hide Cart
-      </button>
+      <Basket />
+      <GameCard />
       <GameBody />
+      <SearchBody />
       <Mainpage />
       <Profile />
       <Footer />

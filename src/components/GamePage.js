@@ -25,7 +25,7 @@ const GamePage = () => {
     } else {
       navigate("/");
     }
-  }, []);
+  }, [navigate]);
   return (
     <div>
       <Header />

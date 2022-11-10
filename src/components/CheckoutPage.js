@@ -25,7 +25,7 @@ const CheckoutPage = () => {
     } else {
       navigate("/");
     }
-  }, []);
+  }, [navigate]);
   return (
     <div>
       <Header />

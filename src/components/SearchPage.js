@@ -25,7 +25,7 @@ const SearchPage = () => {
     } else {
       navigate("/");
     }
-  }, []);
+  }, [navigate]);
   return (
     <div>
       <Header />

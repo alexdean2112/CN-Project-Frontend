@@ -7,7 +7,8 @@ import Mainpage from "./components/Mainpage";
 import Profile from "./components/Profile";
 import Footer from "./components/Footer";
 import SearchBody from "./components/SearchBody";
-import GameCard from "./components/GameCard"
+import GameCard from "./components/GameCard";
+import Basket from "./components/Basket";
 import './App.css';
 
 
@@ -20,6 +21,7 @@ function App() {
       {/* <Register setter={setUser} />
       <Login setter={setUser} /> */}
       <Header />
+      <Basket />
       <GameCard />
       <GameBody />
       <SearchBody />

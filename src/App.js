@@ -9,9 +9,22 @@ import CheckoutPage from "./components/CheckoutPage";
 import GamePage from "./components/GamePage";
 import SearchPage from "./components/SearchPage";
 import { useState } from "react";
+import { getCookie } from "./common";
 
 function App() {
   const [user, setUser] = useState();
+
+  useEffect(() => {
+    let cookie = getCookie("jwt_token");
+    if (cookie !== false) {
+      loginWithToken(cookie);
+    }
+  }, []);
+
+  const loginWithToken = async (cookie) => {
+    const user = await findUser(cookie);
+    setUser(user);
+  };
 
   return (
     <Routes>

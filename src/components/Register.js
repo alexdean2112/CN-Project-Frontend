@@ -63,7 +63,7 @@ export const Login = ({ setter }) => {
         <input onChange={(event) => setPassword(event.target.value)} />
       </label>
 
-      <button type="submit" id="spreaded-button">
+      <button type="submit">
         Login
       </button>
     </form>

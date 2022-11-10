@@ -8,10 +8,24 @@ import ProfilePage from "./components/ProfilePage";
 import CheckoutPage from "./components/CheckoutPage";
 import GamePage from "./components/GamePage";
 import SearchPage from "./components/SearchPage";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { getCookie } from "./common";
+import { findUser } from "./utils/userUtils";
 
 function App() {
   const [user, setUser] = useState();
+
+  useEffect(() => {
+    let cookie = getCookie("jwt_token");
+    if (cookie !== false) {
+      loginWithToken(cookie);
+    }
+  }, []);
+
+  const loginWithToken = async (cookie) => {
+    const user = await findUser(cookie);
+    setUser(user);
+  };
 
   return (
     <Routes>

@@ -1,5 +1,3 @@
-/* Comments are all required code for register/login + commented out checkout*/
-
 import "./App.css";
 import { Routes, Route } from "react-router-dom";
 import LoginPage from "./components/LoginPage";
@@ -11,6 +9,7 @@ import SearchPage from "./components/SearchPage";
 import { useState, useEffect } from "react";
 import { getCookie } from "./common";
 import { findUser } from "./utils/userUtils";
+
 
 function App() {
   const [user, setUser] = useState();
@@ -28,6 +27,7 @@ function App() {
   };
 
   return (
+
     <Routes>
       <Route path="/" element={<LoginPage setter={setUser} />} />
       <Route path="/home" element={<HomePage />} />
@@ -36,6 +36,7 @@ function App() {
       <Route path="/game" element={<GamePage />} />
       <Route path="/search" element={<SearchPage />} />
     </Routes>
+
   );
 }
 

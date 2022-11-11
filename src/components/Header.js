@@ -1,5 +1,6 @@
 import "../componentstyles/Header.css";
 import { useNavigate } from "react-router-dom";
+import { Basket } from "./Basket"
 
 const Header = ({ setter, user }) => {
     

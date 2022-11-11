@@ -24,6 +24,10 @@ const Header = () => {
                             <div className="dropdown-content">
                                 <p>PLACEHOLDER</p>
                             </div>
+=======
+                                <button>Edit Profile</button>
+                                <button>Logout</button>
+                            </div>
                     </div>
                 </div>
             </div>

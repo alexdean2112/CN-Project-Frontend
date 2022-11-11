@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import Basket from "./Basket";
 import { useNavigate } from "react-router-dom";
 
-const Header = ({ setter, user }) => {
+const Header = ({ setter, user, basket }) => {
   const navigate = useNavigate();
 
   const logoutHandler = () => {
@@ -24,7 +24,7 @@ const Header = ({ setter, user }) => {
       </Link>
 
       <div className="navbar">
-        <Basket />
+        <Basket basket={basket} />
         <div className="dropdown">
           <button className="dropbtn">Most Popular</button>
         </div>

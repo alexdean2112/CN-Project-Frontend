@@ -29,7 +29,7 @@ const CheckoutPage = ({ setter, user, basket }) => {
   }, [navigate]);
   return (
     <div>
-      <Header user={user} setter={setter} />
+      <Header user={user} setter={setter} basket={basket} />
       <Checkout basket={basket} />
       <Footer />
     </div>

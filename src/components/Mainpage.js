@@ -11,7 +11,7 @@ const Mainpage = () => {
             </div>
             <div className="categories">
                 <div className="category">
-                    <Link to="/search"><h2>Most Popular</h2> </Link>
+                    <Link to="/game"><h2>Most Popular</h2> </Link>
                 </div>
                 <div className="category">
                 <Link to="/search"><h2>Latest Games</h2></Link>

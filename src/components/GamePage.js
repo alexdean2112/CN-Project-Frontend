@@ -28,7 +28,7 @@ const GamePage = ({ setter, user, atb, basket }) => {
   }, [navigate]);
   return (
     <div>
-      <Header user={user} setter={setter} />
+      <Header user={user} setter={setter} basket={basket} />
       <GameBody atb={atb} basket={basket} />
       <Footer />
     </div>

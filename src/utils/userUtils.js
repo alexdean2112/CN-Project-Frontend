@@ -1,4 +1,4 @@
-import { writeCookie } from "../common";
+import { writeCookie, getCookie } from "../common";
 
 export const createUser = async (username, email, password, setter) => {
   try {

@@ -25,13 +25,13 @@ const Header = ({ setter, user }) => {
           <button className="dropbtn">Special Offers</button>
         </div>
         <div id="rightside">
-          <p id="loggeduser">{`Welcome USER`}</p>
+          {user && <p id="loggeduser">{`Welcome ${user.username}`}</p>}
           <div className="dropdown">
-            <img
+            { user && <img
               alt="profile"
               id="profile"
               src={require("../assets/profile.png")}
-            />
+            />}
             <div className="dropdown-content">
               <button>Edit Profile</button>
               <button onClick={logoutHandler}>Logout</button>

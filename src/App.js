@@ -12,6 +12,7 @@ import { findUser } from "./utils/userUtils";
 
 function App() {
   const [user, setUser] = useState();
+  const [basket, setBasket] = useState([]);
 
   useEffect(() => {
     let cookie = getCookie("jwt_token");
@@ -25,14 +26,15 @@ function App() {
     setUser(user);
   };
 
+
   return (
     <Routes>
-      <Route path="/" element={<LoginPage setter={setUser} />} />
-      <Route path="/home" element={<HomePage user={user} setter={setUser} />} />
-      <Route path="/profile" element={<ProfilePage user={user} setter={setUser} />} />
-      <Route path="/checkout" element={<CheckoutPage user={user} setter={setUser} />} />
-      <Route path="/game" element={<GamePage user={user} setter={setUser} />} />
-      <Route path="/search" element={<SearchPage user={user} setter={setUser} />} />
+      <Route path="/" element={<LoginPage setter={setUser} basket={basket} />} />
+      <Route path="/home" element={<HomePage user={user} setter={setUser} basket={basket} />} />
+      <Route path="/profile" element={<ProfilePage user={user} setter={setUser} basket={basket} />} />
+      <Route path="/game" element={<GamePage user={user} setter={setUser} atb={setBasket} basket={basket} />} />
+      <Route path="/checkout" element={<CheckoutPage user={user} setter={setUser} basket={basket} atb={setBasket} />} />
+      <Route path="/search" element={<SearchPage user={user} setter={setUser} basket={basket} />} />
     </Routes>
   );
 }

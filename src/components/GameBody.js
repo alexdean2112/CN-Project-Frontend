@@ -1,7 +1,15 @@
-import '../componentstyles/GameBody.css'
+import "../componentstyles/GameBody.css";
 
+const GameBody = ({ title, genre, price, rating, atb, basket }) => {
 
-const GameBody = ({ title, genre, price, rating }) => {
+  const addGame = () => {
+    const temp = [...basket];
+    temp.push(object);
+    atb(temp);
+  };
+
+  const object = { title: "Legend of Zelda", price: "39.99" };
+  
     return (
         <div id="gamebody">
             <div className="gamecard">
@@ -14,26 +22,19 @@ const GameBody = ({ title, genre, price, rating }) => {
                         <h1>Title:{title}</h1>
                     </div>
                     <div className='infoTag'>
-                        <h1>Genre:{genre}</h1>
-                    </div>
-                    <div className='infoTag'>
                         <h1>Price:{price}</h1>
-                    </div>
-                    <div className='infoTag'>
-                        <h1>Rating:{rating}</h1>
-                    </div>
                 </div>
                 <div className="description">
                     <p>will pull from API later</p>
                 </div>
-                <div className='buttonContainer'>
-                    <button className="addBasketBtn">Add to basket</button>
-                </div>
+                  <button className="addBasketBtn" onClick={addGame}>
+                     Add to basket
+                   </button>
+                  </div>
                 </div>
             </div>
-            {/* <img alt="gmaebackground" src={require("../assets/background_texture.png")}></img> */}
-        </div>
-    )
-}
+    </div>
+  );
+};
 
-export default GameBody
+export default GameBody;

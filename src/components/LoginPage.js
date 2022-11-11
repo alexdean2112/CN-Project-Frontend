@@ -3,17 +3,16 @@ import Footer from "./Footer";
 import { Register, Login } from "./Register";
 import styled from "styled-components";
 
-const LoginPage = ({ setter }) => {
+const LoginPage = ({ setter, basket }) => {
   return (
     <div>
-      <Header />
+      <Header basket={basket} />
       <SuperContainer>
         <InputContainer>
           <Register setter={setter} />
           <Login setter={setter} />
         </InputContainer>
       </SuperContainer>
-
       <Footer />
     </div>
   );

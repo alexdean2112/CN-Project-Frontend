@@ -1,9 +1,6 @@
 import "../componentstyles/Checkout.css";
 import { createOrder } from "../utils/orderUtils";
 
-// This will need to be mapped later on?????
-// Game image 50x50 and platform image 16x16
-
 const Checkout = ({ basket, atb }) => {
 
   const checkoutHandler = () => {
@@ -12,7 +9,6 @@ const Checkout = ({ basket, atb }) => {
     ))
     atb([])
   };
-
   return (
     <div>
       <h1>YOUR SHOPPING CART</h1>

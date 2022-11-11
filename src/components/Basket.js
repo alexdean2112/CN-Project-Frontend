@@ -108,7 +108,7 @@ const Sidefooter = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  paddint-top: 5px;
+  padding-top: 5px;
   margin: 0;
   cursor: pointer;
   border-top: 4px solid whitesmoke;

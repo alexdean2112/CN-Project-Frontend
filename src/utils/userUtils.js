@@ -97,7 +97,7 @@ export const deleteUser = async (username, email, password) => {
   }
 };
 
-export const loginUser = async (username, email, password, setter) => {
+export const loginUser = async (username, email, password, setter, cookie) => {
   try {
     const response = await fetch("http://localhost:5001/loginUser", {
       method: "POST",

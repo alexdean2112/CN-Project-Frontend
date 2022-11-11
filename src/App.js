@@ -10,7 +10,6 @@ import { useState, useEffect } from "react";
 import { getCookie } from "./common";
 import { findUser } from "./utils/userUtils";
 
-
 function App() {
   const [user, setUser] = useState();
 
@@ -27,16 +26,14 @@ function App() {
   };
 
   return (
-
     <Routes>
       <Route path="/" element={<LoginPage setter={setUser} />} />
-      <Route path="/home" element={<HomePage />} />
-      <Route path="/profile" element={<ProfilePage user={user} />} />
-      <Route path="/checkout" element={<CheckoutPage />} />
-      <Route path="/game" element={<GamePage />} />
-      <Route path="/search" element={<SearchPage />} />
+      <Route path="/home" element={<HomePage user={user} setter={setUser} />} />
+      <Route path="/profile" element={<ProfilePage user={user} setter={setUser} />} />
+      <Route path="/checkout" element={<CheckoutPage user={user} setter={setUser} />} />
+      <Route path="/game" element={<GamePage user={user} setter={setUser} />} />
+      <Route path="/search" element={<SearchPage user={user} setter={setUser} />} />
     </Routes>
-
   );
 }
 

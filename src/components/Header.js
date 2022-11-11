@@ -1,5 +1,5 @@
-import "../componentstyles/Header.css"
-import Basket from "./Basket";
+import "../componentstyles/Header.css";
+import { useNavigate } from "react-router-dom";
 
 const Header = () => {
     return (
@@ -24,17 +24,11 @@ const Header = () => {
                             <div className="dropdown-content">
                                 <p>PLACEHOLDER</p>
                             </div>
-=======
-                                <button>Edit Profile</button>
-                                <button>Logout</button>
-                            </div>
-                    </div>
-                </div>
-            </div>
+                  </div>
+              </div>
+          </div>
         </div>
-    )
-}
+  );
+};
 
 export default Header;
-
-

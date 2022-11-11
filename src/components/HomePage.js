@@ -5,6 +5,7 @@ import { useEffect } from "react";
 import { writeCookie, getCookie } from "../common";
 import { useNavigate } from "react-router-dom";
 
+
 const HomePage = () => {
   const navigate = useNavigate();
   useEffect(() => {

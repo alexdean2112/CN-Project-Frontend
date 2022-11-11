@@ -50,7 +50,7 @@ const Profile = () => {
                         </div>
                     </form>
                 </div>
-                <div>
+                <div className="formsContainer">
                     <form onSubmit={submitHandler2}>
                         <label> Update email:
                             <br></br>
@@ -62,7 +62,7 @@ const Profile = () => {
                         </div>
                     </form>
                 </div>
-                <div>
+                <div className="formsContainer">
                     <form onSubmit={submitHandler3}>
                         <label> Update Password:
                             <br></br>

@@ -32,7 +32,6 @@ const Header = ({ setter, user }) => {
               <button onClick={() => {navigate("/profile")}}>Edit Profile</button>
               <button onClick={logoutHandler}>Logout</button>
             </div>
-          </div>
         </div>
       </div>
     </div>

@@ -37,6 +37,7 @@ const Header = ({ setter, user }) => {
               <button onClick={logoutHandler}>Logout</button>
             </div>
           </div>
+
         </div>
       </div>
     </div>

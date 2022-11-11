@@ -6,6 +6,7 @@ import { writeCookie, getCookie } from "../common";
 import { useNavigate } from "react-router-dom";
 
 const HomePage = ({ setter, user }) => {
+
   const navigate = useNavigate();
   useEffect(() => {
     const getUser = async () => {

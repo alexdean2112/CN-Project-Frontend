@@ -1,11 +1,17 @@
 import "../componentstyles/Checkout.css";
+import { createOrder } from "../utils/orderUtils";
 
 // This will need to be mapped later on?????
 // Game image 50x50 and platform image 16x16
 
-const Checkout = ({ basket }) => {
+const Checkout = ({ basket, atb }) => {
 
-  console.log(basket)
+  const checkoutHandler = () => {
+    basket.map((item, index) => (
+      createOrder(item.title, item.price)
+    ))
+    atb([])
+  };
 
   return (
     <div>
@@ -30,7 +36,7 @@ const Checkout = ({ basket }) => {
           </div>
           <p id="center">To finalise your order, select checkout below.</p>
           <div id="purchase">
-            <button id="padded-button">CHECKOUT</button>
+            <button id="padded-button" onClick={checkoutHandler}>CHECKOUT</button>
           </div>
         </div>
       </div>

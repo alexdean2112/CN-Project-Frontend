@@ -102,8 +102,8 @@ export const loginUser = async (username, email, password, setter) => {
     const response = await fetch("http://localhost:5001/loginUser", {
       method: "POST",
       headers: {
-        "Content-Type":
-          "application/json" /* Authorization : Cookies go here */,
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${cookie}`
       },
       body: JSON.stringify({
         username: username,

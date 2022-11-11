@@ -3,10 +3,6 @@ import '../componentstyles/SearchBody.css'
 const SearchBody = () => {
     return (
         <div>
-
-            <br></br>
-            <br></br>
-            <br></br>
             <div className="gamecontainer">
                 <div className="filterComp">
                     <div className="filterTitle">
@@ -103,14 +99,54 @@ const SearchBody = () => {
                             <h1>£ --</h1>
                         </div>
                     </div>
+                    <div className="popularGame">
+                        <div className="rank">
+                            <h1>6</h1>
+                        </div>
+                        <div className="gameImg">
+                            <h1>Game icon</h1>
+                        </div>
+                        <div className="gameName">
+                            <h1>Popular Game Name</h1>
+                        </div>
+                        <div className="gamePrice">
+                            <h1>Price</h1>
+                            <h1>£ --</h1>
+                        </div>
+                    </div>
+                    <div className="popularGame">
+                        <div className="rank">
+                            <h1>7</h1>
+                        </div>
+                        <div className="gameImg">
+                            <h1>Game icon</h1>
+                        </div>
+                        <div className="gameName">
+                            <h1>Popular Game Name</h1>
+                        </div>
+                        <div className="gamePrice">
+                            <h1>Price</h1>
+                            <h1>£ --</h1>
+                        </div>
+                    </div>
+                    <div className="popularGame">
+                        <div className="rank">
+                            <h1>8</h1>
+                        </div>
+                        <div className="gameImg">
+                            <h1>Game icon</h1>
+                        </div>
+                        <div className="gameName">
+                            <h1>Popular Game Name</h1>
+                        </div>
+                        <div className="gamePrice">
+                            <h1>Price</h1>
+                            <h1>£ --</h1>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <br></br>
-            <div className="buttons">
-                <button>Most Popular</button>
-                <button>Latest Games</button>
-                <button>Special Offers</button>
-            </div>
+
         </div>
     )
 }

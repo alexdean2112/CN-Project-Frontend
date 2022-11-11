@@ -1,8 +1,7 @@
 import '../componentstyles/MainPage.css';
-import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const Mainpage = () => {
-    const navigate = useNavigate();
     return (
         <div>
             <div className="carousalContainer">
@@ -11,14 +10,14 @@ const Mainpage = () => {
                 </div>
             </div>
             <div className="categories">
-                <div onClick={() => {navigate("/search")}} className="category">
-                    <h2>Most Popular</h2>
+                <div className="category">
+                    <Link to="/search"><h2>Most Popular</h2> </Link>
                 </div>
-                <div onClick={() => {navigate("/search")}} className="category">
-                <h2>Latest Games</h2>
+                <div className="category">
+                <Link to="/search"><h2>Latest Games</h2></Link>
                 </div>
-                <div onClick={() => {navigate("/search")}} className="category">
-                <h2>Special Offers</h2>
+                <div className="category">
+                <Link to="/search"><h2>Special Offers</h2></Link>
                 </div>
             </div>
             <div className="randomGames">

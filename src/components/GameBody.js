@@ -1,9 +1,14 @@
 import "../componentstyles/GameBody.css";
 
-const GameBody = ({ title, genre, price, rating, atb }) => {
+const GameBody = ({ title, genre, price, rating, atb, basket }) => {
+
   const addGame = () => {
-    atb({ /* include game details here from API */ });
+    const temp = [...basket];
+    temp.push(object);
+    atb(temp);
   };
+
+  const object = { title: "Legend of Zelda", price: "39.99" };
 
   return (
     <div id="gamebody">

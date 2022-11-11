@@ -1,6 +1,7 @@
 import "../componentstyles/basket.css";
 import styled from "styled-components";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const Basket = () => {
   const [show, setShow] = useState(false);
@@ -36,7 +37,7 @@ const Basket = () => {
                 <h1>£ - -</h1>
               </Total>
             </Sidecontent>
-            <Sidefooter>Checkout</Sidefooter>
+            <Sidefooter><Link to="/checkout"><button>Checkout</button></Link></Sidefooter>
           </BarContainer>
         </div>
       </BasketContainer>

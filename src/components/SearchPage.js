@@ -5,7 +5,7 @@ import { useEffect } from "react";
 import { writeCookie, getCookie } from "../common";
 import { useNavigate } from "react-router-dom";
 
-const SearchPage = () => {
+const SearchPage = ({ setter, user }) => {
   const navigate = useNavigate();
   useEffect(() => {
     const getUser = async () => {
@@ -25,10 +25,10 @@ const SearchPage = () => {
     } else {
       navigate("/");
     }
-  }, []);
+  }, [navigate]);
   return (
     <div>
-      <Header />
+      <Header user={user} setter={setter} />
       <SearchBody />
       <Footer />
     </div>

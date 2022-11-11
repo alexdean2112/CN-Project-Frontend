@@ -38,13 +38,14 @@ export const readUsers = async () => {
   }
 };
 
-export const findUser = async (cookie) => {
+export const findUser = async () => {
   try {
+    const token = getCookie("jwt_token");
     const response = await fetch("http://localhost:5001/loginUser", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        Authorization: `Bearer ${cookie}`,
+        "Authorization": token,
       },
     });
     const data = await response.json();
@@ -97,13 +98,14 @@ export const deleteUser = async (username, email, password) => {
   }
 };
 
-export const loginUser = async (username, email, password, setter, cookie) => {
+export const loginUser = async (username, email, password, setter) => {
   try {
+    const token = getCookie("jwt_token");
     const response = await fetch("http://localhost:5001/loginUser", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        Authorization: `Bearer ${cookie}`
+        "Authorization": token
       },
       body: JSON.stringify({
         username: username,

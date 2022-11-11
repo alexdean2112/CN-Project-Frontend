@@ -28,7 +28,7 @@ const CheckoutPage = ({ setter, user }) => {
   }, [navigate]);
   return (
     <div>
-      <Header setter={setter} />
+      <Header user={user} setter={setter} />
       <Checkout />
       <Footer />
     </div>

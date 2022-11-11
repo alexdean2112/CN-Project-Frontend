@@ -12,7 +12,7 @@ const Header = ({ setter, user }) => {
 
   return (
     <div id="header">
-      <img id="banner" alt="header" src={require("../assets/banner.png")}></img>
+      <img onClick={() => {navigate("/home")}} id="banner" alt="header" src={require("../assets/banner.png")}></img>
 
       <div className="navbar">
         <div className="dropdown">
@@ -25,15 +25,15 @@ const Header = ({ setter, user }) => {
           <button className="dropbtn">Special Offers</button>
         </div>
         <div id="rightside">
-          <p id="loggeduser">{`Welcome USER`}</p>
+          {user && <p id="loggeduser">{`Welcome ${user.username}`}</p>}
           <div className="dropdown">
-            <img
+            { user && <img
               alt="profile"
               id="profile"
               src={require("../assets/profile.png")}
-            />
+            />}
             <div className="dropdown-content">
-              <button>Edit Profile</button>
+              <button onClick={() => {navigate("/profile")}}>Edit Profile</button>
               <button onClick={logoutHandler}>Logout</button>
             </div>
           </div>

@@ -1,24 +1,37 @@
 import '../componentstyles/GameBody.css'
 
 
-const GameBody = ({title,genre,price,rating}) =>{
+const GameBody = ({ title, genre, price, rating }) => {
     return (
-        <div id = "gamebody">
-            
+        <div id="gamebody">
             <div className="gamecard">
                 <div className="gamecover">
-                    <img id='picplace' alt = "cover of the game" src ={require('../assets/barrybee.png')}></img>
+                    <img id='picplace' alt="cover of the game" src={require('../assets/gow.jpg')}></img>
                 </div>
-                <div className="info">
-                    <h1>Title:{title}<br></br>Genre:{genre}</h1>
-                    <h1>Price:{price}<br></br>Rating:{rating}</h1>
+                <div className='infoContainer'>
+                    <div className="info">
+                    <div className='infoTag'>
+                        <h1>Title:{title}</h1>
+                    </div>
+                    <div className='infoTag'>
+                        <h1>Genre:{genre}</h1>
+                    </div>
+                    <div className='infoTag'>
+                        <h1>Price:{price}</h1>
+                    </div>
+                    <div className='infoTag'>
+                        <h1>Rating:{rating}</h1>
+                    </div>
                 </div>
                 <div className="description">
                     <p>will pull from API later</p>
                 </div>
-                <button className="addBasketBtn">Add to basket</button>
+                <div className='buttonContainer'>
+                    <button className="addBasketBtn">Add to basket</button>
+                </div>
+                </div>
             </div>
-            <img alt = "gmaebackground" src ={require("../assets/background_texture.png")}></img>
+            {/* <img alt="gmaebackground" src={require("../assets/background_texture.png")}></img> */}
         </div>
     )
 }

@@ -5,7 +5,7 @@ import { useEffect } from "react";
 import { writeCookie, getCookie } from "../common";
 import { useNavigate } from "react-router-dom";
 
-const GamePage = ({ setter, user }) => {
+const GamePage = ({ setter, user, atb }) => {
   const navigate = useNavigate();
   useEffect(() => {
     const getUser = async () => {
@@ -29,7 +29,7 @@ const GamePage = ({ setter, user }) => {
   return (
     <div>
       <Header user={user} setter={setter} />
-      <GameBody />
+      <GameBody atb={atb}/>
       <Footer />
     </div>
   );

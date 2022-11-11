@@ -2,7 +2,7 @@ import "../componentstyles/Checkout.css";
 
 // This will need to be mapped later on?????
 
-const Checkout = () => {
+const Checkout = ({ basket }) => {
   return (
     <div>
       <h1>YOUR SHOPPING CART</h1>

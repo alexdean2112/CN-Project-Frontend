@@ -1,6 +1,10 @@
 .gamecontainer{
     display: flex;
     flex-direction: row;
+    padding-top: 4vh;
+    margin-left: 10px;
+    margin-right: 10px;
+    height: 100vh;
 }
 button {
     background: #ffe600;

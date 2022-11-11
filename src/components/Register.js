@@ -80,7 +80,7 @@ export const Login = ({ setter }) => {
 
   return (
     <form onSubmit={submitHandler}>
-      <br />
+
       <label>
         Username
         <input onChange={(event) => setUsername(event.target.value)} />

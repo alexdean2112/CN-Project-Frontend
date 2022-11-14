@@ -8,7 +8,6 @@ import { useNavigate } from 'react-router-dom';
 
 
 const GameCard = ({fullgame, platform, passedGameData, setPassedGameData, basket, setBasket}) => {
-    const [platformData, setPlatformData] = useState([])
     const [value, setValue] = useState(0)
     const navigate = useNavigate();
 

@@ -17,16 +17,6 @@ const GameCard = ({fullgame, platform, passedGameData, setPassedGameData, basket
 
 }, [])
 
-
-    const platformPull = async () => {
-        let platData = await pullPlatform()
-        setPlatformData(platData)
-    }
-
-    const platformFind = async () => {
-        console.log(platformData)
-    }
-
     const viewGame = (passedGameData) => {
         console.log("LOOK HERE!!!")
         console.log(fullgame)

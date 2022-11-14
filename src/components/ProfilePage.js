@@ -14,7 +14,6 @@ const ProfilePage = ({ setter, user, basket }) => {
         headers: { "Content-Type": "application/json", Authorization: token },
       });
       const data = await response.json();
-      console.log(data.username);
       if (data.token) {
         setter(data.username);
         navigate("/profile");
@@ -30,7 +29,7 @@ const ProfilePage = ({ setter, user, basket }) => {
   return (
     <div>
       <Header user={user} setter={setter} basket={basket} />
-      <Profile />
+      <Profile user={user} setter={setter} />
       <Footer />
     </div>
   );

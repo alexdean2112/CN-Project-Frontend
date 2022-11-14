@@ -5,7 +5,8 @@ import { useNavigate } from "react-router-dom";
 
 const Header = ({ setter, user, basket }) => {
   const navigate = useNavigate();
-
+  console.log("Look, it's the header")
+  console.log(user)
   const logoutHandler = () => {
     document.cookie =
       "jwt_token=; path=/; Expires=Thu, 01 Jan 1970 00:00:00 UTC;";
@@ -35,7 +36,7 @@ const Header = ({ setter, user, basket }) => {
           <button className="dropbtn">Special Offers</button>
         </div>
         <div id="rightside">
-          {user && <p id="loggeduser">{`Welcome ${user.username}`}</p>}
+          {user && <p id="loggeduser">{`Welcome ${user}`}</p>}
           <div className="dropdown">
             <img alt="profile" id="profile" src={require("../assets/profile.png")} />
             <div className="dropdown-content">

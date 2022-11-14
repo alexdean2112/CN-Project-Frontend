@@ -2,7 +2,7 @@ import Header from "./Header";
 import Footer from "./Footer";
 import Profile from "./Profile";
 import { useEffect } from "react";
-import { writeCookie, getCookie } from "../common";
+import { getCookie } from "../common";
 import { useNavigate } from "react-router-dom";
 
 const ProfilePage = ({ setter, user, basket }) => {
@@ -14,8 +14,9 @@ const ProfilePage = ({ setter, user, basket }) => {
         headers: { "Content-Type": "application/json", Authorization: token },
       });
       const data = await response.json();
+      console.log(data.username);
       if (data.token) {
-        writeCookie("jwt_token", data.token, 7);
+        setter(data.username);
         navigate("/profile");
       }
     };
@@ -25,7 +26,7 @@ const ProfilePage = ({ setter, user, basket }) => {
     } else {
       navigate("/");
     }
-  }, [navigate]);
+  }, [navigate, setter]);
   return (
     <div>
       <Header user={user} setter={setter} basket={basket} />

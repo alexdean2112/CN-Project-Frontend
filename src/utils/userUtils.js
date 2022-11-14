@@ -42,7 +42,7 @@ export const findUser = async () => {
   try {
     const token = getCookie("jwt_token");
     const response = await fetch("http://localhost:5001/loginUser", {
-      method: "POST",
+      method: "GET",
       headers: {
         "Content-Type": "application/json",
         "Authorization": token,

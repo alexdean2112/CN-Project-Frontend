@@ -16,7 +16,7 @@ const CheckoutPage = ({ setter, user, basket, atb }) => {
       });
       const data = await response.json();
       if (data.token) {
-        writeCookie("jwt_token", data.token, 7);
+        setter(data.username);
         navigate("/checkout");
       }
     };
@@ -26,7 +26,7 @@ const CheckoutPage = ({ setter, user, basket, atb }) => {
     } else {
       navigate("/");
     }
-  }, [navigate]);
+  }, [navigate, setter]);
   return (
     <div>
       <Header user={user} setter={setter} basket={basket} />

@@ -1,6 +1,7 @@
 .gamecontainer {
     display: flex;
     align-items:center;
+    word-break: break-all;
     background-color:rgb(79, 109, 126, 0.5);
     width: 33vw;
     height: 25vh;
@@ -9,9 +10,6 @@
     margin-top:6vh;
     margin-right:3vw;
     box-shadow:3px 3px black;
-    position: relative;
-    top: 0;
-    transition: top ease 0.5s;
     border-style: solid;
     border-width: 1px;
 }
@@ -31,7 +29,7 @@
 #gametitle {
     font-size: 2.5vh;
     font-weight:bold;
-    line-height: 1.3vh;
+
 }
 
 #gameplatforms{
@@ -40,7 +38,9 @@
 }
 
 #gamesummary{
-
+    width:10vw;
+    height: 3vh;
+    word-break: break-all;
 }
 
 #gameprice{
@@ -52,6 +52,10 @@
     flex-direction: row;
     justify-content:right;
     position: relative;
-    top:6.5vh;
+    top:4.5vh;
     left:0.5vw;
+}
+
+#addtobasket {
+    
 }

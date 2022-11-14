@@ -2,7 +2,7 @@ import Header from "./Header";
 import Footer from "./Footer";
 import Checkout from "./Checkout";
 import { useEffect } from "react";
-import { writeCookie, getCookie } from "../common";
+import { getCookie } from "../common";
 import { useNavigate } from "react-router-dom";
 
 const CheckoutPage = ({ setter, user, basket, atb }) => {

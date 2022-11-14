@@ -20,13 +20,14 @@ export const createUser = async (username, email, password, setter) => {
   }
 };
 
-export const readUsers = async () => {
+export const readUsers = async (token) => {
   try {
     const response = await fetch("http://localhost:5001/readUsers", {
       method: "GET",
       headers: {
         "Content-Type":
-          "application/json" /* Authorization : Cookies go here */,
+          "application/json",
+          "Authorization": `Bearer ${token}`,
       },
     });
     const data = await response.json();
@@ -38,14 +39,14 @@ export const readUsers = async () => {
   }
 };
 
-export const findUser = async () => {
+export const findUser = async (token) => {
   try {
     const token = getCookie("jwt_token");
     const response = await fetch("http://localhost:5001/loginUser", {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
-        "Authorization": token,
+        "Authorization": `Bearer ${token}`,
       },
     });
     const data = await response.json();
@@ -55,40 +56,42 @@ export const findUser = async () => {
   }
 };
 
-export const updateUser = async (username, password) => {
+export const updateUser = async (user, key, value, token) => {
   try {
     const response = await fetch("http://localhost:5001/updateUser", {
       method: "PUT",
       headers: {
         "Content-Type":
-          "application/json" /* Authorization : Cookies go here */,
+          "application/json",
+          "Authorization": `Bearer ${token}`,
       },
       body: JSON.stringify({
         filter: {
-          // Filter Goes here
+          "username": user
         },
         update: {
-          // Update goes here
+          [key]: value
         },
       }),
     });
     const data = await response.json();
-    console.log(data);
+    return data;
   } catch (error) {
     console.log(error);
   }
 };
 
-export const deleteUser = async (username, email, password) => {
+export const deleteUser = async (user, token) => {
   try {
     const response = await fetch("http://localhost:5001/deleteUser", {
       method: "DELETE",
       headers: {
         "Content-Type":
-          "application/json" /* Authorization : Cookies go here */,
+          "application/json",
+          "Authorization": `Bearer ${token}`,
       },
       body: JSON.stringify({
-        username: username,
+        username: user,
       }),
     });
     const data = await response.json();
@@ -98,14 +101,14 @@ export const deleteUser = async (username, email, password) => {
   }
 };
 
-export const loginUser = async (username, email, password, setter) => {
+export const loginUser = async (username, email, password, setter, token) => {
   try {
     const token = getCookie("jwt_token");
     const response = await fetch("http://localhost:5001/loginUser", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        "Authorization": token
+        "Authorization": `Bearer ${token}`,
       },
       body: JSON.stringify({
         username: username,

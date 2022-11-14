@@ -1,8 +1,9 @@
 import "../componentstyles/profile.css"
 import { useState } from "react"
 import { updateUser } from "../utils/userUtils"
+import { getCookie } from "../common"
 
-const Profile = () => {
+const Profile = ({ user, setter }) => {
 
     const [username, setUsername] = useState("")
     const [email, setEmail] = useState("")
@@ -10,19 +11,23 @@ const Profile = () => {
 
     const submitHandler1 = async (event) => {
         event.preventDefault()
-        const data = await updateUser(username)
+        const token = getCookie("jwt_token");
+        const data = await updateUser(user, "username", username, token)
+        setter(username)
         console.log(data)
     }
 
     const submitHandler2 = async (event) => {
         event.preventDefault()
-        const data = await updateUser(username, email)
+        const token = getCookie("jwt_token");
+        const data = await updateUser(user, "email", email, token);
         console.log(data)
     }
 
     const submitHandler3 = async (event) => {
         event.preventDefault()
-        const data = await updateUser(username, password)
+        const token = getCookie("jwt_token");
+        const data = await updateUser(user, "password", password, token)
         console.log(data)
     }
 
@@ -45,8 +50,8 @@ const Profile = () => {
                             <input className="updateinput" onChange={(event) => setUsername(event.target.value)} onClick={(event) => (event.target.value = "")} />
                         </label>
                         <br></br>
-                        <div >
-                            <button className="updatebutton" type='submit'>Update Password</button>
+                        <div>
+                            <button onClick={submitHandler1} className="updatebutton" type='submit'>Update Username</button>
                         </div>
                     </form>
                 </div>
@@ -58,7 +63,7 @@ const Profile = () => {
                         </label>
                         <br></br>
                         <div>
-                            <button type='submit' className="updatebutton">Update Email</button>
+                            <button onClick={submitHandler2} type='submit' className="updatebutton">Update Email</button>
                         </div>
                     </form>
                 </div>
@@ -70,7 +75,7 @@ const Profile = () => {
                         </label>
                         <br></br>
                         <div >
-                            <button className="updatebutton" type='submit'>Update Password</button>
+                            <button onClick={submitHandler3} className="updatebutton" type='submit'>Update Password</button>
                         </div>
                     </form>
                 </div>

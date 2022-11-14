@@ -2,7 +2,7 @@ import Header from "./Header";
 import Footer from "./Footer";
 import SearchBody from "./SearchBody";
 import { useEffect } from "react";
-import { writeCookie, getCookie } from "../common";
+import { getCookie } from "../common";
 import { useNavigate } from "react-router-dom";
 
 const SearchPage = ({ setter, user, basket }) => {

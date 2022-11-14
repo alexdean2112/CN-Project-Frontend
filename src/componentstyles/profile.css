@@ -8,22 +8,27 @@
 }
 
 .imageContainer {
-    height: 60vh;
+    height: 33.2vh;
     width: 40vw;
+    margin: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .imageContainer img {
+    height: 32vh;
+    width: auto;
     border: 3px solid black;
 }
 
 .detailsContainer {
-    height: 60vh;
+    height: 25vh;
     width: 20vw;
     display: flex;
+    margin: 10px;
     flex-direction: column;
+    border: solid 1px white;
 }
 
 .infoContainer p {
@@ -32,8 +37,15 @@
 }
 
 .orderContainer {
-    height: 60vh;
+    height: 25vh;
     width: 20vw;
     display: flex;
+    margin: 10px;
     flex-direction: column;
+    border: solid 1px white;
+}
+.formsContainer{
+    display: flex;
+    height: 15vh;
+    border: solid 1px white;
 }

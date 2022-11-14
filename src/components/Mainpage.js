@@ -1,6 +1,21 @@
 import '../componentstyles/MainPage.css';
+import { Link } from 'react-router-dom';
+import { pullGames, pullPlatform } from '../utils/gameUtils';
+import { useEffect, useState } from "react"
+import GameCard from "./GameCard"
 
-const Mainpage = () => {
+
+const Mainpage = ({passedGameData, setPassedGameData, basket, setBasket}) => {
+    const [gameData, setGameData] = useState([])
+    
+    const gameMap = async () => {
+        let data = await pullGames()
+        setGameData(data)
+      }   
+    useEffect(() => {
+        gameMap()
+    }, [])
+
     return (
         <div>
             <div className="carousalContainer">
@@ -10,36 +25,19 @@ const Mainpage = () => {
             </div>
             <div className="categories">
                 <div className="category">
-                    <h2>Most Popular</h2>
+                    <Link to="/game"><h2>Most Popular</h2> </Link>
                 </div>
-                <div className="category">
-                    <h2>Latest Games</h2>
-                </div>
-                <div className="category">
-                    <h2>Special Offers</h2>
-                </div>
+            <div className="category">
+                <Link to="/search"><h2>Latest Games</h2></Link>
             </div>
-            <div className="randomGames">
-                <div className="randomGame">
-                    <h3>Random Game</h3>
-                </div>
-                <div className="randomGame">
-                    <h3>Random Game</h3>
-                </div>
-                <div className="randomGame">
-                    <h3>Random Game</h3>
-                </div>
+            <div className="category">
+                <Link to="/search"><h2>Special Offers</h2></Link>
             </div>
-            <div className="randomGames">
-                <div className="randomGame">
-                    <h3>Random Game</h3>
-                </div>
-                <div className="randomGame">
-                    <h3>Random Game</h3>
-                </div>
-                <div className="randomGame">
-                    <h3>Random Game</h3>
-                </div>
+        </div>
+            <div className="randomGame">
+                {gameData.slice(0,3).map((game, index, platformData) => (
+                    <GameCard id = "gameCard" key = {index} fullgame={game} platform={platformData} passedGameData={passedGameData} setPassedGameData={setPassedGameData} />
+                ))}
             </div>
         </div>
     )

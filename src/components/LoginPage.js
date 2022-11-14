@@ -32,6 +32,6 @@ const InputContainer = styled.div`
   border: solid 5px black;
   background-color: rgb(0, 0, 0, 0.6);
   align-item: center;
-  height: 35vh;
-  width: 50vw;
+  height: 50%;
+  width: 50%;
 `

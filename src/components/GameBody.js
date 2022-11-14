@@ -1,6 +1,5 @@
 import '../componentstyles/GameBody.css'
 
-
 const GameBody = ({ atb, basket, setBasket, passedGameData }) => {
   console.log(passedGameData)
   const object = { title: passedGameData[1].title, price: passedGameData[1].price };
@@ -33,9 +32,11 @@ const GameBody = ({ atb, basket, setBasket, passedGameData }) => {
                   <div className="description">
                       <p>Summary: {passedGameData[1].summary}</p>
                   </div>
+                  <div className="buttonContainer">
                     <button className="addBasketBtn" onClick={addGame}>
                        Add to basket
                      </button>
+                     </div>
                     </div>
                   </div>
               </div>
@@ -44,3 +45,4 @@ const GameBody = ({ atb, basket, setBasket, passedGameData }) => {
   };
   
   export default GameBody;
+

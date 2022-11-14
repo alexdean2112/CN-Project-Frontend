@@ -2,10 +2,10 @@ import Header from "./Header";
 import Footer from "./Footer";
 import Mainpage from "./Mainpage";
 import { useEffect } from "react";
-import { writeCookie, getCookie } from "../common";
+import { getCookie } from "../common";
 import { useNavigate } from "react-router-dom";
 
-const HomePage = ({ setter, user }) => {
+const HomePage = ({ setter, user, passedGameData, setPassedGameData }) => {
 
   const navigate = useNavigate();
   useEffect(() => {
@@ -16,7 +16,7 @@ const HomePage = ({ setter, user }) => {
       });
       const data = await response.json();
       if (data.token) {
-        writeCookie("jwt_token", data.token, 7);
+        setter(data.username);
         navigate("/home");
       }
     };
@@ -26,12 +26,12 @@ const HomePage = ({ setter, user }) => {
     } else {
       navigate("/");
     }
-  }, [navigate]);
+  }, [navigate, setter]);
 
   return (
     <div>
       <Header user={user} setter={setter} />
-      <Mainpage />
+      <Mainpage passedGameData={passedGameData} setPassedGameData={setPassedGameData}/>
       <Footer />
     </div>
   );

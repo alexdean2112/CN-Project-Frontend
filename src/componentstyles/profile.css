@@ -46,6 +46,8 @@
 }
 .formsContainer{
     display: flex;
-    height: 15vh;
+    position: relative;
+    bottom: 50vh;
+    height: 30vh;
     border: solid 1px white;
 }

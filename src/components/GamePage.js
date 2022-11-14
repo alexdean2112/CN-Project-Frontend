@@ -15,7 +15,7 @@ const GamePage = ({ setter, user, atb, basket }) => {
       });
       const data = await response.json();
       if (data.token) {
-        writeCookie("jwt_token", data.token, 7);
+        setter(data.username);
         navigate("/game");
       }
     };
@@ -25,7 +25,7 @@ const GamePage = ({ setter, user, atb, basket }) => {
     } else {
       navigate("/");
     }
-  }, [navigate]);
+  }, [navigate, setter]);
   return (
     <div>
       <Header user={user} setter={setter} basket={basket} />

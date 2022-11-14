@@ -31,7 +31,7 @@ const InputContainer = styled.div`
   display: flex;
   border: solid 5px black;
   background-color: rgb(0, 0, 0, 0.6);
-  align-item: center;
+  align-items: center;
   height: 35vh;
   width: 50vw;
 `

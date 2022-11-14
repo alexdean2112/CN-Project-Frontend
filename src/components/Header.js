@@ -36,14 +36,21 @@ const Header = ({ setter, user, basket }) => {
           <button className="dropbtn">Special Offers</button>
         </div>
         <div id="rightside">
-          {user && <p id="loggeduser">{`Welcome ${user}`}</p>}
+          <div>
+            {user && <p id="loggeduser">{`Welcome ${user.username}`}</p>}
+          </div>
           <div className="dropdown">
             <img alt="profile" id="profile" src={require("../assets/profile.png")} />
             <div className="dropdown-content">
-              <Link to="/profile">
-                <button>Edit Profile</button>
-              </Link>
-              <button onClick={logoutHandler}>Logout</button>
+              <div className="dropdownEdit">
+                <div>
+                <Link to="/profile">
+                  <button>Edit Profile</button>
+                </Link></div>
+              <div>
+                <button onClick={logoutHandler}>Logout</button>
+              </div>
+              </div>
             </div>
           </div>
         </div>

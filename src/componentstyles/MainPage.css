@@ -1,5 +1,6 @@
 body {
     background-image: url(../assets/background_texture.png);
+
 }
 .carousalContainer{
     display: flex;
@@ -34,21 +35,12 @@ body {
     padding-right: 20px;
     cursor: pointer;
 }
-.randomGames{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    margin-bottom: 20px;
-}
+
 .randomGame{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    background-color: rgb(0, 0, 0, 0.4);
-    border: solid 1px rgb(0, 0, 0);
-    color: white;
-    height: 15vh;
-    width: 30vw;
-    border-radius: 10px;
+    display:flex;
+    
+}
+
+#gameCard{
+    width: 100%;
 }

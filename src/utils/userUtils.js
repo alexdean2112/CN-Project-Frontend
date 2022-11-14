@@ -91,7 +91,7 @@ export const deleteUser = async (user, token) => {
           "Authorization": `Bearer ${token}`,
       },
       body: JSON.stringify({
-        username: user,
+        "username": user,
       }),
     });
     const data = await response.json();

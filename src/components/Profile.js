@@ -1,13 +1,15 @@
 import "../componentstyles/profile.css"
 import { useState } from "react"
-import { updateUser } from "../utils/userUtils"
+import { updateUser, deleteUser } from "../utils/userUtils"
 import { getCookie } from "../common"
+import { useNavigate } from "react-router-dom"
 
 const Profile = ({ user, setter }) => {
 
     const [username, setUsername] = useState("")
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
+    const navigate = useNavigate();
 
     const submitHandler1 = async (event) => {
         event.preventDefault()
@@ -29,6 +31,16 @@ const Profile = ({ user, setter }) => {
         const token = getCookie("jwt_token");
         const data = await updateUser(user, "password", password, token)
         console.log(data)
+    }
+
+    const submitHandler4 = async (event) => {
+        event.preventDefault()
+        const token = getCookie("jwt_token");
+        const data = await deleteUser(user, token)
+        console.log(data)
+        document.cookie = "jwt_token=; path=/; Expires=Thu, 01 Jan 1970 00:00:00 UTC;";
+        navigate("/");
+        setter("");
     }
 
     return (
@@ -76,6 +88,13 @@ const Profile = ({ user, setter }) => {
                         <br></br>
                         <div >
                             <button onClick={submitHandler3} className="updatebutton" type='submit'>Update Password</button>
+                        </div>
+                    </form>
+                </div>
+                <div className="formsContainer">
+                    <form onSubmit={submitHandler4}>
+                        <div className="buttonDiv">
+                            <button onClick={submitHandler4} className="updatebutton" type='submit'>Delete User</button>
                         </div>
                     </form>
                 </div>

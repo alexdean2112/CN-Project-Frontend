@@ -16,7 +16,7 @@ const HomePage = ({ setter, user }) => {
       });
       const data = await response.json();
       if (data.token) {
-        writeCookie("jwt_token", data.token, 7);
+        setter(data.username);
         navigate("/home");
       }
     };
@@ -26,7 +26,7 @@ const HomePage = ({ setter, user }) => {
     } else {
       navigate("/");
     }
-  }, [navigate]);
+  }, [navigate, setter]);
 
   return (
     <div>

@@ -15,7 +15,7 @@ const SearchPage = ({ setter, user, basket }) => {
       });
       const data = await response.json();
       if (data.token) {
-        writeCookie("jwt_token", data.token, 7);
+        setter(data.username);
         navigate("/search");
       }
     };
@@ -25,7 +25,7 @@ const SearchPage = ({ setter, user, basket }) => {
     } else {
       navigate("/");
     }
-  }, [navigate]);
+  }, [navigate, setter]);
   return (
     <div>
       <Header user={user} setter={setter} basket={basket} />

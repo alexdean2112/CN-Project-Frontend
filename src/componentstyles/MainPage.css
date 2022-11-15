@@ -10,7 +10,14 @@ body {
     width: 95vw;
     height: 60vh;
     margin-top: 20px;
+    border: solid black 5px;
+    background-color: rgba(78, 78, 78, 0.8);
 }
+
+.carouselImage {
+    scale: 90%;
+}
+
 .categories{
     display: flex;
     flex-direction: row;

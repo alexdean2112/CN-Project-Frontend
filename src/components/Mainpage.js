@@ -20,18 +20,7 @@ const Mainpage = ({passedGameData, setPassedGameData, basket, setBasket}) => {
         <div className='mainbody'>
             <div className="carousalContainer">
                 <div className="carousal">
-                    <img src={require("../assets/Carousel.png")} alt="Carousel" />
-                </div>
-            </div>
-            <div className="categories">
-                <div className="category">
-                    <Link to="/toprated"><h2>Most Popular</h2> </Link>
-                </div>
-                <div className="category">
-                    <Link to="/search"><h2>Latest Games</h2></Link>
-                </div>
-                <div className="category">
-                    <Link to="/search"><h2>Special Offers</h2></Link>
+                    <img className='carouselImage' src={require("../assets/Carousel.png")} alt="Carousel" />
                 </div>
             </div>
             <div className='games'>

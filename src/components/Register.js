@@ -41,7 +41,7 @@ export const Register = ({ setter }) => {
   };
 
   return (
-    <form onSubmit={submitHandler}>
+    <form className="form" onSubmit={submitHandler}>
       <label>
         Username
         <input onChange={(e) => setUsername(e.target.value)} />
@@ -79,7 +79,7 @@ export const Login = ({ setter }) => {
   };
 
   return (
-    <form onSubmit={submitHandler}>
+    <form className="form" onSubmit={submitHandler}>
 
       <label>
         Username

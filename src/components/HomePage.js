@@ -6,7 +6,6 @@ import { getCookie } from "../common";
 import { useNavigate } from "react-router-dom";
 
 const HomePage = ({ setter, user, passedGameData, setPassedGameData }) => {
-
   const navigate = useNavigate();
   useEffect(() => {
     const getUser = async () => {
@@ -31,7 +30,10 @@ const HomePage = ({ setter, user, passedGameData, setPassedGameData }) => {
   return (
     <div>
       <Header user={user} setter={setter} />
-      <Mainpage passedGameData={passedGameData} setPassedGameData={setPassedGameData}/>
+      <Mainpage
+        passedGameData={passedGameData}
+        setPassedGameData={setPassedGameData}
+      />
       <Footer />
     </div>
   );

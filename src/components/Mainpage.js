@@ -23,16 +23,13 @@ const Mainpage = ({passedGameData, setPassedGameData, basket, setBasket}) => {
                 </div>
             </div>
             <div className='games'>
-                <div className="randomGame">
-                    {gameData.slice(0,2).map((game, index, platformData) => (
+                    <div>{gameData.slice(0,2).map((game, index, platformData) => (
                         <GameCard id = "gameCard" key = {index} fullgame={game} platform={platformData} passedGameData={passedGameData} setPassedGameData={setPassedGameData} />
-                    ))}
-                </div>
-                <div className="randomGame">
-                    {gameData.slice(2,4).map((game, index, platformData) => (
+                    ))}</div>
+                    <div>{gameData.slice(2,4).map((game, index, platformData) => (
                         <GameCard id = "gameCard" key = {index} fullgame={game} platform={platformData} passedGameData={passedGameData} setPassedGameData={setPassedGameData} />
-                    ))}
-                </div>
+                    ))}</div>
+
             </div>            
         </div>
     )

@@ -63,22 +63,27 @@ const Profile = ({ user, setter }) => {
         <div className="test">
           <h1>User Details</h1>
           <p>Username: Placeholder</p>
-          <p>Email: Placeholder@email.com</p>
-          <p>Password: VerySecret</p>
-        </div>
-        <div className="orderContainer">
-          <h1>Orders</h1>
-          <p>Insert Orders here</p>
         </div>
       </div>
-
+      <div className="orderContainer">
+          <h1>Orders</h1>
+          {orders?.length > 0 ? (
+            orders.map((item, index) => (
+              <p>
+                {item.itemName}, {item.itemPrice}
+              </p>
+            ))
+          ) : (
+            <p>No orders found.</p>
+          )}
+        </div>
       <div className="formsOuter">
         <div className="updateTitle">
           <h1>Update Information</h1>
         </div>
         <div className="formMiddle">
           <div className="formsContainer">
-            <form onSubmit={submitHandler1}>
+            <form className="profileForm" onSubmit={submitHandler1}>
               <label>
                 <br></br>
                 <input
@@ -95,7 +100,6 @@ const Profile = ({ user, setter }) => {
                   className="updatebutton"
                   type="submit"
                 >
-
                   Update<br></br>Username
                 </button>
               </div>
@@ -119,7 +123,7 @@ const Profile = ({ user, setter }) => {
                   type="submit"
                   className="updatebutton"
                 >
-
+                  
                   Update<br></br>Email
 
                 </button>
@@ -127,7 +131,7 @@ const Profile = ({ user, setter }) => {
             </form>
           </div>
           <div className="formsContainer">
-            <form onSubmit={submitHandler3}>
+            <form className="profileForm" onSubmit={submitHandler3}>
               <label>
                 <br></br>
                 <input
@@ -153,7 +157,7 @@ const Profile = ({ user, setter }) => {
           </div>
           <div className="formsContainer">
 
-            <form onSubmit={submitHandler4}>
+            <form className="profileForm" onSubmit={submitHandler4}>
               <div className="buttonDiv">
                 <button
                   onClick={submitHandler4}
@@ -167,18 +171,6 @@ const Profile = ({ user, setter }) => {
             </form>
           </div>
 
-        </div>
-        <div className="orderContainer">
-          <h1>Orders</h1>
-          {orders?.length > 0 ? (
-            orders.map((item, index) => (
-              <p>
-                {item.itemName}, {item.itemPrice}
-              </p>
-            ))
-          ) : (
-            <p>No orders found.</p>
-          )}
         </div>
       </div>
     </div>

@@ -25,9 +25,8 @@ export const readUsers = async (token) => {
     const response = await fetch(`${process.env.REACT_APP_REST_API}readUsers`, {
       method: "GET",
       headers: {
-        "Content-Type":
-          "application/json",
-          "Authorization": `Bearer ${token}`,
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${token}`,
       },
     });
     const data = await response.json();
@@ -46,7 +45,7 @@ export const findUser = async (token) => {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
-        "Authorization": `Bearer ${token}`,
+        Authorization: `Bearer ${token}`,
       },
     });
     const data = await response.json();
@@ -61,16 +60,15 @@ export const updateUser = async (user, key, value, token) => {
     const response = await fetch(`${process.env.REACT_APP_REST_API}updateUser`, {
       method: "PUT",
       headers: {
-        "Content-Type":
-          "application/json",
-          "Authorization": `Bearer ${token}`,
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${token}`,
       },
       body: JSON.stringify({
         filter: {
-          "username": user
+          username: user,
         },
         update: {
-          [key]: value
+          [key]: value,
         },
       }),
     });
@@ -86,12 +84,11 @@ export const deleteUser = async (user, token) => {
     const response = await fetch(`${process.env.REACT_APP_REST_API}deleteUser`, {
       method: "DELETE",
       headers: {
-        "Content-Type":
-          "application/json",
-          "Authorization": `Bearer ${token}`,
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${token}`,
       },
       body: JSON.stringify({
-        "username": user,
+        username: user,
       }),
     });
     const data = await response.json();
@@ -108,7 +105,7 @@ export const loginUser = async (username, email, password, setter, token) => {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        "Authorization": `Bearer ${token}`,
+        Authorization: `Bearer ${token}`,
       },
       body: JSON.stringify({
         username: username,

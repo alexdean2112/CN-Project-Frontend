@@ -2,37 +2,34 @@
     display: flex;
     align-items:center;
     justify-content: center;
-    word-break: break-all;
     position:relative;
     background-color:rgb(79, 109, 126, 0.5);
     max-width: 45vw;
     min-width: 45vw;
     max-height: 13vh;
     min-height: 13vw;
-    margin-left:15vw;
-    margin-top:5vh;
-    margin-right:3vw;
+    margin-top: 2vh;
     box-shadow:3px 3px black;
     border-style: solid;
-    border-width: 1px;
+    border-width: 5px;
+    border-radius: 15px;
 }
 
 #gamecover {
     height: 20vh;
-    padding: 1vw;
+    padding: 0.5vw;
 }
 
 .gamedetails {
     margin-left:1vw;
     margin-right:1vw;
-    height:100%;
+    height:26vh;
     width:100%;
 }
 
 #gametitle {
     font-size: 2.5vh;
     font-weight:bold;
-
 }
 
 #gameplatforms{
@@ -41,9 +38,7 @@
 }
 
 #gamesummary{
-    width:20vw;
-    max-height: 3vh;
-    word-break: break-all;
+  margin:auto;  
 }
 
 #gameprice{
@@ -58,6 +53,6 @@
     width:12vw;
     justify-content:space-between;
     position: absolute;
-    top:25vh;
-    left:32.5vw;
+    top:19vh;
+    left:32vw;
 }

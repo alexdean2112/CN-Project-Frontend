@@ -17,8 +17,6 @@ const GameCard = ({fullgame, platform, passedGameData, setPassedGameData, basket
 }, [])
 
     const viewGame = (passedGameData) => {
-        console.log("LOOK HERE!!!")
-        console.log(fullgame)
         fullgame.price = value
         const temp = [passedGameData]
         temp.push({"title": fullgame.name, "price": fullgame.price, "summary": fullgame.summary})
@@ -43,10 +41,10 @@ const GameCard = ({fullgame, platform, passedGameData, setPassedGameData, basket
 
             <div className = "gamedetails">
                 <p id = "gametitle">{fullgame.name}</p>
-                <p id = "gameplatforms">{fullgame.platform}</p>
+                <p id = "gameplatforms">{fullgame.name}</p>
                 <p id = "gamesummary">{fullgame.summary}</p>
                 <div className = "pricesection">
-                    <p id = "gameprice">{value}</p>
+                    <p id = "gameprice">£{value}</p>
                     <button id = "addtobasket" onClick={viewGame}>View Details</button>
                 </div>
             </div>

@@ -1,10 +1,7 @@
 import "../componentstyles/Checkout.css";
 import { createOrder } from "../utils/orderUtils";
-import { useState, useEffect } from "react";
 
 const Checkout = ({ basket, atb, user }) => {
-
-  const [total, setTotal] = useState(0);
 
   const checkoutHandler = () => {
     for (let i = 0; i < basket.length; i++) {
@@ -12,17 +9,6 @@ const Checkout = ({ basket, atb, user }) => {
     };
     atb([]);
   };
-
-  const newPrice = (item) => {
-    const newTotal = total + item;
-    setTotal(newTotal);
-  }
-
-  useEffect(() => {
-    basket.map((item, index) => (
-      newPrice(item.price)
-    ))
-  }, [basket])
 
   return (
     <div>

@@ -8,7 +8,6 @@ import { useNavigate } from 'react-router-dom';
 
 
 const GameCard = ({fullgame, platform, passedGameData, setPassedGameData, basket, setBasket}) => {
-    const [platformData, setPlatformData] = useState([])
     const [value, setValue] = useState(0)
     const navigate = useNavigate();
 
@@ -16,16 +15,6 @@ const GameCard = ({fullgame, platform, passedGameData, setPassedGameData, basket
         setValue(faker.commerce.price(10, 30, 2)) 
 
 }, [])
-
-
-    const platformPull = async () => {
-        let platData = await pullPlatform()
-        setPlatformData(platData)
-    }
-
-    const platformFind = async () => {
-        console.log(platformData)
-    }
 
     const viewGame = (passedGameData) => {
         console.log("LOOK HERE!!!")

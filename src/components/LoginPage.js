@@ -24,14 +24,17 @@ const SuperContainer = styled.div`
   display: flex;
   justify-content: center;
   margin-top: 8vh;
-  height: 59vh;
-  width: 100vw;
-`
+  height: 59%;
+  width: 100%;
+`;
+
 const InputContainer = styled.div`
   display: flex;
   border: solid 5px black;
   background-color: rgb(0, 0, 0, 0.6);
   align-item: center;
-  height: 50%;
-  width: 50%;
-`
+  height: 60vh;
+  width: 50vw;
+  margin-bottom: 8vh;
+  border-radius: 15px;
+`;

@@ -27,7 +27,7 @@ const Header = ({ setter, user, basket }) => {
       <div className="navbar">
         <Basket basket={basket} />
         <div className="dropdown">
-          <button className="dropbtn">Most Popular</button>
+          <Link to ="/toprated"><button className="dropbtn">Top Rated</button></Link>
         </div>
         <div className="dropdown">
           <button className="dropbtn">Latest Games</button>

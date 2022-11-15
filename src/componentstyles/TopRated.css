@@ -1,0 +1,16 @@
+.gameresults{
+    max-width: 100vw;
+    min-width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 4vh;
+}
+
+
+.toprated {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}

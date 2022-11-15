@@ -17,7 +17,7 @@ const Mainpage = ({passedGameData, setPassedGameData, basket, setBasket}) => {
     }, [])
 
     return (
-        <div>
+        <div className='mainbody'>
             <div className="carousalContainer">
                 <div className="carousal">
                     <h1>Carousal</h1>
@@ -25,20 +25,27 @@ const Mainpage = ({passedGameData, setPassedGameData, basket, setBasket}) => {
             </div>
             <div className="categories">
                 <div className="category">
-                    <Link to="/game"><h2>Most Popular</h2> </Link>
+                    <Link to="/toprated"><h2>Most Popular</h2> </Link>
                 </div>
-            <div className="category">
-                <Link to="/search"><h2>Latest Games</h2></Link>
+                <div className="category">
+                    <Link to="/search"><h2>Latest Games</h2></Link>
+                </div>
+                <div className="category">
+                    <Link to="/search"><h2>Special Offers</h2></Link>
+                </div>
             </div>
-            <div className="category">
-                <Link to="/search"><h2>Special Offers</h2></Link>
-            </div>
-        </div>
-            <div className="randomGame">
-                {gameData.slice(0,3).map((game, index, platformData) => (
-                    <GameCard id = "gameCard" key = {index} fullgame={game} platform={platformData} passedGameData={passedGameData} setPassedGameData={setPassedGameData} />
-                ))}
-            </div>
+            <div className='games'>
+                <div className="randomGame">
+                    {gameData.slice(0,2).map((game, index, platformData) => (
+                        <GameCard id = "gameCard" key = {index} fullgame={game} platform={platformData} passedGameData={passedGameData} setPassedGameData={setPassedGameData} />
+                    ))}
+                </div>
+                <div className="randomGame">
+                    {gameData.slice(2,4).map((game, index, platformData) => (
+                        <GameCard id = "gameCard" key = {index} fullgame={game} platform={platformData} passedGameData={passedGameData} setPassedGameData={setPassedGameData} />
+                    ))}
+                </div>
+            </div>            
         </div>
     )
 }

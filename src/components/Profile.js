@@ -56,48 +56,59 @@ const Profile = ({ user, setter }) => {
 
     return (
         <div className="profileContainer">
-            <div className="imageContainer">
-                <img src ={require("../assets/barrybee.png")} alt="placeholder" />
-            </div>
             <div className="detailsContainer">
-                <div className="infoContainer">
+                <div className="imageContainer">
+                    <img src={require("../assets/barrybee.png")} alt="placeholder" />
+                </div>
+                <div className="test">
                     <h1>User Details</h1>
                     <p>Username: Placeholder</p>
                     <p>Email: Placeholder@email.com</p>
                     <p>Password: VerySecret</p>
                 </div>
+                <div className="orderContainer">
+                    <h1>Orders</h1>
+                    <p>Insert Orders here</p>
+                </div>
+            </div>
+            
+            <div className="formsOuter">
+                <div className="updateTitle">
+                    <h1>Update Information</h1>
+                </div>
+                <div className="formMiddle">
                 <div className="formsContainer">
                     <form onSubmit={submitHandler1}>
-                        <label> Update Username:
+                        <label>
                             <br></br>
-                            <input className="updateinput" onChange={(event) => setUsername(event.target.value)} onClick={(event) => (event.target.value = "")} />
+                            <input className="updateinput" placeholder="Username ..." onChange={(event) => setUsername(event.target.value)} onClick={(event) => (event.target.value = "")} />
                         </label>
                         <br></br>
-                        <div>
+                        <div className="buttonDiv">
                             <button onClick={submitHandler1} className="updatebutton" type='submit'>Update Username</button>
                         </div>
                     </form>
                 </div>
                 <div className="formsContainer">
-                    <form onSubmit={submitHandler2}>
-                        <label> Update email:
+                    <form className="profileForm" onSubmit={submitHandler2}>
+                        <label>
                             <br></br>
-                            <input className="updateinput" onChange={(event) => setEmail(event.target.value)} onClick={(event) => (event.target.value = "")} />
+                            <input className="updateinput" placeholder="Email ..." onChange={(event) => setEmail(event.target.value)} onClick={(event) => (event.target.value = "")} />
                         </label>
                         <br></br>
-                        <div>
+                        <div className="buttonDiv">
                             <button onClick={submitHandler2} type='submit' className="updatebutton">Update Email</button>
                         </div>
                     </form>
                 </div>
                 <div className="formsContainer">
                     <form onSubmit={submitHandler3}>
-                        <label> Update Password:
+                        <label>
                             <br></br>
-                            <input className="updateinput" onChange={(event) => setPassword(event.target.value)} onClick={(event) => (event.target.value = "")} />
+                            <input className="updateinput" placeholder="Password ..." onChange={(event) => setPassword(event.target.value)} onClick={(event) => (event.target.value = "")} />
                         </label>
                         <br></br>
-                        <div >
+                        <div className="buttonDiv">
                             <button onClick={submitHandler3} className="updatebutton" type='submit'>Update Password</button>
                         </div>
                     </form>
@@ -121,6 +132,7 @@ const Profile = ({ user, setter }) => {
                     <p>No orders found.</p>
                 )
                 }
+
             </div>
         </div>
     )

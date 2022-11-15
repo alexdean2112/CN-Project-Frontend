@@ -2,7 +2,7 @@ import '../componentstyles/MainPage.css';
 import { Link } from 'react-router-dom';
 import { pullGames } from '../utils/gameUtils';
 import { useEffect, useState } from "react"
-import GameCard from "./GameCard"
+import GameCard from "./GameCard" 
 
 
 const Mainpage = ({passedGameData, setPassedGameData, basket, setBasket}) => {
@@ -20,7 +20,7 @@ const Mainpage = ({passedGameData, setPassedGameData, basket, setBasket}) => {
         <div className='mainbody'>
             <div className="carousalContainer">
                 <div className="carousal">
-                    <h1>Carousal</h1>
+                    <img src={require("../assets/Carousel.png")} alt="Carousel image" />
                 </div>
             </div>
             <div className="categories">

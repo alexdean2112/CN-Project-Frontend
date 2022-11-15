@@ -6,11 +6,10 @@ import { getCookie } from "../common";
 import { useNavigate } from "react-router-dom";
 
 const HomePage = ({ setter, user, passedGameData, setPassedGameData }) => {
-
   const navigate = useNavigate();
   useEffect(() => {
     const getUser = async () => {
-      const response = await fetch("http://localhost:5001/loginUser", {
+      const response = await fetch(`${process.env.REACT_APP_REST_API}loginUser`, {
         method: "GET",
         headers: { "Content-Type": "application/json", Authorization: token },
       });
@@ -31,7 +30,10 @@ const HomePage = ({ setter, user, passedGameData, setPassedGameData }) => {
   return (
     <div>
       <Header user={user} setter={setter} />
-      <Mainpage passedGameData={passedGameData} setPassedGameData={setPassedGameData}/>
+      <Mainpage
+        passedGameData={passedGameData}
+        setPassedGameData={setPassedGameData}
+      />
       <Footer />
     </div>
   );

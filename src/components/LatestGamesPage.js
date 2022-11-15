@@ -1,11 +1,12 @@
 import Header from "./Header";
 import Footer from "./Footer";
-import GameBody from "./GameBody";
+import LatestGame from "./LatestGames";
 import { useEffect } from "react";
 import { getCookie } from "../common";
 import { useNavigate } from "react-router-dom";
 
-const GamePage = ({ setter, user, atb, basket, passedGameData }) => {
+const LatestGamesPage = ({ setter, user, passedGameData, setPassedGameData }) => {
+
   const navigate = useNavigate();
   useEffect(() => {
     const getUser = async () => {
@@ -16,7 +17,7 @@ const GamePage = ({ setter, user, atb, basket, passedGameData }) => {
       const data = await response.json();
       if (data.token) {
         setter(data.username);
-        navigate("/game");
+        navigate("/latest");
       }
     };
     const token = getCookie("jwt_token");
@@ -26,13 +27,14 @@ const GamePage = ({ setter, user, atb, basket, passedGameData }) => {
       navigate("/");
     }
   }, [navigate, setter]);
+
   return (
     <div>
-      <Header user={user} setter={setter} basket={basket} />
-      <GameBody atb={atb} basket={basket} passedGameData={passedGameData} />
+      <Header user={user} setter={setter} />
+      <LatestGame passedGameData={passedGameData} setPassedGameData={setPassedGameData}/>
       <Footer />
     </div>
   );
 };
 
-export default GamePage;
+export default LatestGamesPage;

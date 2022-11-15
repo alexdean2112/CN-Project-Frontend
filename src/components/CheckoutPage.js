@@ -6,11 +6,10 @@ import { getCookie } from "../common";
 import { useNavigate } from "react-router-dom";
 
 const CheckoutPage = ({ setter, user, basket, atb }) => {
-
   const navigate = useNavigate();
   useEffect(() => {
     const getUser = async () => {
-      const response = await fetch("http://localhost:5001/loginUser", {
+      const response = await fetch(`${process.env.REACT_APP_REST_API}loginUser`, {
         method: "GET",
         headers: { "Content-Type": "application/json", Authorization: token },
       });
@@ -30,7 +29,7 @@ const CheckoutPage = ({ setter, user, basket, atb }) => {
   return (
     <div>
       <Header user={user} setter={setter} basket={basket} />
-      <Checkout basket={basket} atb={atb} />
+      <Checkout basket={basket} atb={atb} user={user} />
       <Footer />
     </div>
   );

@@ -4,8 +4,6 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 
 const Basket = ({ basket, atb }) => {
-  console.log("below ist die basket");
-  console.log(basket);
   const [show, setShow] = useState(false);
   return (
     <UltraContainer>
@@ -50,6 +48,7 @@ const Basket = ({ basket, atb }) => {
 };
 
 export default Basket;
+
 const UltraContainer = styled.div`
   // display: flex;
   // flex-direction: row-reverse;
@@ -58,7 +57,10 @@ const UltraContainer = styled.div`
   // margin-left: 10px;
 `;
 
-const YellowButton = styled.div``;
+const YellowButton = styled.div`
+  margin-top: 4px;
+`;
+
 const BasketContainer = styled.div`
   display: flex;
   flex-direction: row-reverse;

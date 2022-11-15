@@ -36,9 +36,18 @@ body {
     cursor: pointer;
 }
 
+.mainbody{
+    max-width: 100vw;
+    min-width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
 .randomGame{
     display:flex;
-    
+    flex-direction: row;
+    justify-content: center;
 }
 
 #gameCard{

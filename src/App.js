@@ -15,7 +15,7 @@ import { findUser } from "./utils/userUtils";
 function App() {
   const [user, setUser] = useState();
   const [basket, setBasket] = useState([]);
-  const [passedGameData, setPassedGameData] = useState([])
+  const [passedGameData, setPassedGameData] = useState([]);
 
   useEffect(() => {
     let cookie = getCookie("jwt_token");
@@ -28,8 +28,6 @@ function App() {
     const user = await findUser(cookie);
     setUser(user);
   };
-
-
 
   return (
     <Routes>

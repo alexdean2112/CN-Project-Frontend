@@ -31,7 +31,7 @@ const Header = ({ setter, user, basket }) => {
         <Link to ="/latest"><button className="dropbtn">Latest Games</button></Link>
         </div>
         <div className="dropdown">
-          <button className="dropbtn">Special Offers</button>
+        <Link to ="/search"><button className="dropbtn">Search</button></Link>
         </div>
         <div id="rightside">
           <div>

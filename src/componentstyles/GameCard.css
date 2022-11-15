@@ -2,14 +2,11 @@
     display: flex;
     align-items:center;
     justify-content: center;
-    word-break: break-all;
-    position:relative;
+    position: relative;
     background-color:rgb(79, 109, 126, 0.5);
-    max-width: 45vw;
-    min-width: 45vw;
-    max-height: 13vh;
-    min-height: 13vw;
-    margin-left:15vw;
+    width: 40vw;
+    height: 13vh;
+    margin-left:10vw;
     margin-top:5vh;
     margin-right:3vw;
     box-shadow:3px 3px black;

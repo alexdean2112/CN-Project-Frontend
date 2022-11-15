@@ -6,7 +6,6 @@ import { getCookie } from "../common";
 import { useNavigate } from "react-router-dom";
 
 const CheckoutPage = ({ setter, user, basket, atb }) => {
-
   const navigate = useNavigate();
   useEffect(() => {
     const getUser = async () => {

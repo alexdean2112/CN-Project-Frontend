@@ -2,7 +2,7 @@ import { writeCookie, getCookie } from "../common";
 
 export const createUser = async (username, email, password, setter) => {
   try {
-    const response = await fetch("http://localhost:5001/createUser", {
+    const response = await fetch(`${process.env.REACT_APP_REST_API}createUser`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({

@@ -1,13 +1,26 @@
 import "../componentstyles/profile.css"
-import { useState } from "react"
-import { updateUser } from "../utils/userUtils"
+import { useEffect, useState } from "react"
+import { updateUser, deleteUser } from "../utils/userUtils"
 import { getCookie } from "../common"
+import { useNavigate } from "react-router-dom"
+import { readOrders } from "../utils/orderUtils"
 
 const Profile = ({ user, setter }) => {
 
     const [username, setUsername] = useState("")
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
+    const [orders, setOrders] = useState([]);
+    const navigate = useNavigate();
+
+    const getData = async (user) => {
+        const data = await readOrders(user);
+        setOrders(data)
+    }
+
+    useEffect(() => {
+        getData(user)
+    }, [user])
 
     const submitHandler1 = async (event) => {
         event.preventDefault()
@@ -29,6 +42,16 @@ const Profile = ({ user, setter }) => {
         const token = getCookie("jwt_token");
         const data = await updateUser(user, "password", password, token)
         console.log(data)
+    }
+
+    const submitHandler4 = async (event) => {
+        event.preventDefault()
+        const token = getCookie("jwt_token");
+        const data = await deleteUser(user, token)
+        console.log(data)
+        document.cookie = "jwt_token=; path=/; Expires=Thu, 01 Jan 1970 00:00:00 UTC;";
+        navigate("/");
+        setter("");
     }
 
     return (
@@ -91,18 +114,25 @@ const Profile = ({ user, setter }) => {
                     </form>
                 </div>
                 <div className="formsContainer">
-                    <form onSubmit={submitHandler3}>
-                        <label>
-                            <br></br>
-                            <input className="updateinput" placeholder="Delete ..." onChange={(event) => setPassword(event.target.value)} onClick={(event) => (event.target.value = "")} />
-                        </label>
-                        <br></br>
+                    <form onSubmit={submitHandler4}>
                         <div className="buttonDiv">
-                            <button className="updatebutton" type='submit'>Delete User</button>
+                            <button onClick={submitHandler4} className="updatebutton" type='submit'>Delete User</button>
                         </div>
                     </form>
                 </div>
-                </div>
+            </div>
+            <div className="orderContainer">
+                <h1>Orders</h1>
+                {orders?.length > 0
+                ? (
+                    orders.map((item, index) => (
+                        <p>{item.itemName}, {item.itemPrice}</p>
+                    ))
+                ) : (
+                    <p>No orders found.</p>
+                )
+                }
+
             </div>
         </div>
     )

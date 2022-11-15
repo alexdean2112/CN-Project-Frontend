@@ -30,7 +30,7 @@ const CheckoutPage = ({ setter, user, basket, atb }) => {
   return (
     <div>
       <Header user={user} setter={setter} basket={basket} />
-      <Checkout basket={basket} atb={atb} />
+      <Checkout basket={basket} atb={atb} user={user} />
       <Footer />
     </div>
   );

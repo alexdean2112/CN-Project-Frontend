@@ -7,12 +7,8 @@ body {
     justify-content: center;
 }
 .carousal {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     width: 95vw;
-    height: 40vh;
-    border: solid 5px black;
+    height: 60vh;
     margin-top: 20px;
 }
 .categories{

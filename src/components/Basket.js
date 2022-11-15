@@ -4,8 +4,6 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 
 const Basket = ({ basket, atb }) => {
-  console.log("below ist die basket");
-  console.log(basket);
   const [show, setShow] = useState(false);
   return (
     <UltraContainer>

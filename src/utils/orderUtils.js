@@ -1,11 +1,12 @@
-export const createOrder = async (itemName, itemPrice) => {
+export const createOrder = async (itemName, itemPrice, user) => {
     try {
         const response = await fetch( "http://localhost:5001/createOrder", {
             method: "POST",
             headers: {"Content-Type": "application/json"},
             body: JSON.stringify({
                 "itemName": itemName,
-                "itemPrice": itemPrice
+                "itemPrice": itemPrice,
+                "user": user,
             })
         })
         const data = await response.json()
@@ -15,17 +16,17 @@ export const createOrder = async (itemName, itemPrice) => {
     }
 }
 
-export const readOrders = async () => {
+export const readOrders = async (user) => {
     try {
         const response = await fetch( "http://localhost:5001/readOrders", {
-            method: "GET",
+            method: "POST",
             headers: {"Content-Type": "application/json"},
+            body: JSON.stringify({
+                "user": user,
+            })
         })
-        const data = await response.json()
-        // console.log(data.order)
-        // const orderData = data.order.map(order => order.itemName, order.itemPrice)
-        // return orderData
-        return data;
+        const data = await response.json();
+        return data.order;
     } catch (error) {
         console.log(error)
     }

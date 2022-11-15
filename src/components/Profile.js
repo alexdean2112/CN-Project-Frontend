@@ -1,15 +1,26 @@
 import "../componentstyles/profile.css"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { updateUser, deleteUser } from "../utils/userUtils"
 import { getCookie } from "../common"
 import { useNavigate } from "react-router-dom"
+import { readOrders } from "../utils/orderUtils"
 
 const Profile = ({ user, setter }) => {
 
     const [username, setUsername] = useState("")
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
+    const [orders, setOrders] = useState([]);
     const navigate = useNavigate();
+
+    const getData = async (user) => {
+        const data = await readOrders(user);
+        setOrders(data)
+    }
+
+    useEffect(() => {
+        getData(user)
+    }, [user])
 
     const submitHandler1 = async (event) => {
         event.preventDefault()
@@ -101,7 +112,15 @@ const Profile = ({ user, setter }) => {
             </div>
             <div className="orderContainer">
                 <h1>Orders</h1>
-                <p>Insert Orders here</p>
+                {orders?.length > 0
+                ? (
+                    orders.map((item, index) => (
+                        <p>{item.itemName}, {item.itemPrice}</p>
+                    ))
+                ) : (
+                    <p>No orders found.</p>
+                )
+                }
             </div>
         </div>
     )

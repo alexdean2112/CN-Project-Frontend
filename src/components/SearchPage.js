@@ -2,10 +2,10 @@ import Header from "./Header";
 import Footer from "./Footer";
 import SearchBody from "./SearchBody";
 import { useEffect } from "react";
-import { writeCookie, getCookie } from "../common";
+import { getCookie } from "../common";
 import { useNavigate } from "react-router-dom";
 
-const SearchPage = ({ setter, user }) => {
+const SearchPage = ({ setter, user, basket }) => {
   const navigate = useNavigate();
   useEffect(() => {
     const getUser = async () => {
@@ -15,7 +15,7 @@ const SearchPage = ({ setter, user }) => {
       });
       const data = await response.json();
       if (data.token) {
-        writeCookie("jwt_token", data.token, 7);
+        setter(data.username);
         navigate("/search");
       }
     };
@@ -25,10 +25,10 @@ const SearchPage = ({ setter, user }) => {
     } else {
       navigate("/");
     }
-  }, [navigate]);
+  }, [navigate, setter]);
   return (
     <div>
-      <Header user={user} setter={setter} />
+      <Header user={user} setter={setter} basket={basket} />
       <SearchBody />
       <Footer />
     </div>

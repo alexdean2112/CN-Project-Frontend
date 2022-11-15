@@ -1,66 +1,74 @@
 #gamebody{
-    /* background-color:rgb(79, 109, 126, 0.5); */
-    border-radius: 10px;
-    width: 50%;
-    margin-left: 450px;
-    /* width: 50%;
-    margin: 125px;
-    height: 550px;
-    position: relative;
-    left: 275px;
     display: flex;
-    flex-wrap: wrap; */
+    justify-content: center;
+    align-items: center;
+    /* border: solid 5px white; */
+    margin: 10px;
+    height: 70vh;
 }
 .gamecard{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
     background-color:rgb(79, 109, 126, 0.5);
     box-shadow: #08080b 0 10px 20px -10px;
     border: solid 2px black;
     border-radius: 10px;
-    width: 100%;
-    margin: 125px;
-    height: 550px;
-    /* position: relative; */
-    left: 275px;
-    display: flex;
-    flex-wrap: wrap;
+    height: 50vh;
+    width: 90vw;
+
 }
-/* .gamecover{
-    border: solid 2px black;
+.gamecover{
+    /* border: solid 2px white; */
     border-radius: 15px;
-    width: 40%;
-    height: 300px;
-} */
-#picplace{
+    height: 80%;
+    width: auto;
+    margin-top: 70px;
+    margin-left: 50px;
+}
+.gamecover img{
     display: flex;
     box-shadow: #08080b 0 10px 20px -10px;
-    /* flex-direction: column; */
-    height: 280px;
+    height: 100%;
+    width: auto;
+    border-radius: 15px;
+}
+.infoContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* border: solid 1px white; */
+    margin-top: 70px;
+    margin-right: 50px;
+    height: 80%;
     width: 100%;
-    margin-left: 20px;
-    margin-top: 20px;
-    border-radius: 10px;
 }
 .info{
-    border-radius: 15px;
-    /* border-style:dotted; */
-    margin-top: -30%;
-    margin-left: 350px;
-    height: 100px;
-    width: 60%;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    text-decoration: underline;
+    align-items: center;
+    flex-direction: column;
+    /* border: solid 1px white; */
+    border-radius: 15px;
+    color: rgb(7, 7, 7);
+    height: 95%;
+    width: 95%;
+}
+.infoTag{
+    display: flex;
+    font-size: 10px;
+    width: 90%;
+    /* border: solid 1px white; */
 }
 .description{
     border: solid 2px black;
     border-radius: 15px;
     box-shadow: #08080b 0 10px 20px -10px;
-    /* border-style:dotted; */
-    margin-top: -20%;
-    margin-left: 350px;
-    height: 200px;
-    width: 60%;
+    font-size: 20px;
+    color: aliceblue;
+    margin: 10px;
+    height: 60%;
+    width: 90%;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -74,10 +82,7 @@
     cursor: pointer;
     font-size: 20px;
     font-weight: 700;
-    line-height: 24px;
-    margin-left: 750px;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    line-height: 34px;
     opacity: 1;
     outline: 0 solid transparent;
     padding: 5px 20px;
@@ -86,5 +91,15 @@
     touch-action: manipulation;
     width: fit-content;
     word-break: break-word;
-    border: 0;
+    border: solid 1px black;
+}
+.buttonContainer{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    font-size: 30px;
+    height: 10%;
+    width: 90%;
+    margin-bottom: 10px;
+    /* border: solid 1px white; */
 }

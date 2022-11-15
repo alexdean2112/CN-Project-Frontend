@@ -1,7 +1,40 @@
 import GodOfWar from "../assets/gow.jpg"
 import "../componentstyles/GameCard.css"
+import {useState, useEffect} from "react"
+import {pullPlatform} from "../utils/gameUtils"
+import {faker} from '@faker-js/faker'
+import { useNavigate } from 'react-router-dom';
 
-const GameCard = () => {
+
+
+const GameCard = ({fullgame, platform, passedGameData, setPassedGameData, basket, setBasket}) => {
+    const [value, setValue] = useState(0)
+    const navigate = useNavigate();
+
+    useEffect (() => {
+        setValue(faker.commerce.price(10, 30, 2)) 
+
+}, [])
+
+    const viewGame = (passedGameData) => {
+        console.log("LOOK HERE!!!")
+        console.log(fullgame)
+        fullgame.price = value
+        const temp = [passedGameData]
+        temp.push({"title": fullgame.name, "price": fullgame.price, "summary": fullgame.summary})
+        setPassedGameData(temp) 
+        navigate("/game")
+
+    }
+
+    useEffect(() => {
+        pullPlatform()
+    }, [])
+
+
+    console.log(fullgame)
+    
+    
     return (
         <div className = "gamecontainer">
             <div className = "image">
@@ -9,12 +42,12 @@ const GameCard = () => {
             </div>
 
             <div className = "gamedetails">
-                <p id = "gametitle">GAMETITLEHERE</p>
-                <p id = "gameplatforms">GAMEPLATFORMSHERE</p>
-                <p id = "gamesummary">GAMESUMMARYHERE</p>
+                <p id = "gametitle">{fullgame.name}</p>
+                <p id = "gameplatforms">{fullgame.platform}</p>
+                <p id = "gamesummary">{fullgame.summary}</p>
                 <div className = "pricesection">
-                    <p id = "gameprice">PRICEHERE</p>
-                    <button id = "addtobasket">Add To Basket</button>
+                    <p id = "gameprice">{value}</p>
+                    <button id = "addtobasket" onClick={viewGame}>View Details</button>
                 </div>
             </div>
 

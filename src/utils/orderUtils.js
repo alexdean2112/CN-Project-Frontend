@@ -1,11 +1,9 @@
-export const createOrder = async (orderId, userId, itemName, itemPrice) => {
+export const createOrder = async (itemName, itemPrice) => {
     try {
         const response = await fetch( "http://localhost:5001/createOrder", {
             method: "POST",
             headers: {"Content-Type": "application/json"},
             body: JSON.stringify({
-                "orderId": orderId,
-                "userId": userId,
                 "itemName": itemName,
                 "itemPrice": itemPrice
             })
@@ -24,9 +22,10 @@ export const readOrders = async () => {
             headers: {"Content-Type": "application/json"},
         })
         const data = await response.json()
-        console.log(data.orders)
-        const orderData = data.orders.map(orders => orders.orderId, orders.userId, orders.itemName, orders.itemPrice)
-        return orderData
+        // console.log(data.order)
+        // const orderData = data.order.map(order => order.itemName, order.itemPrice)
+        // return orderData
+        return data;
     } catch (error) {
         console.log(error)
     }

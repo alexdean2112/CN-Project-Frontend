@@ -2,10 +2,11 @@ import Header from "./Header";
 import Footer from "./Footer";
 import Checkout from "./Checkout";
 import { useEffect } from "react";
-import { writeCookie, getCookie } from "../common";
+import { getCookie } from "../common";
 import { useNavigate } from "react-router-dom";
 
-const CheckoutPage = ({ setter, user }) => {
+const CheckoutPage = ({ setter, user, basket, atb }) => {
+
   const navigate = useNavigate();
   useEffect(() => {
     const getUser = async () => {
@@ -15,7 +16,7 @@ const CheckoutPage = ({ setter, user }) => {
       });
       const data = await response.json();
       if (data.token) {
-        writeCookie("jwt_token", data.token, 7);
+        setter(data.username);
         navigate("/checkout");
       }
     };
@@ -25,11 +26,11 @@ const CheckoutPage = ({ setter, user }) => {
     } else {
       navigate("/");
     }
-  }, [navigate]);
+  }, [navigate, setter]);
   return (
     <div>
-      <Header user={user} setter={setter} />
-      <Checkout />
+      <Header user={user} setter={setter} basket={basket} />
+      <Checkout basket={basket} atb={atb} />
       <Footer />
     </div>
   );

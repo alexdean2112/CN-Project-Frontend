@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 
 const Checkout = ({ basket, atb, user }) => {
 
-  const [total, setTotal] = useState(0);
+  const [total, setTotal] = useState();
 
   const checkoutHandler = () => {
     for (let i = 0; i < basket.length; i++) {
@@ -19,6 +19,7 @@ const Checkout = ({ basket, atb, user }) => {
   }
 
   useEffect(() => {
+    setTotal(0)
     basket.map((item, index) => (
       newPrice(item.price)
     ))

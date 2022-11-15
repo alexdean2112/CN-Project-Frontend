@@ -31,11 +31,11 @@ const Header = ({ setter, user, basket }) => {
         <Link to ="/latest"><button className="dropbtn">Latest Games</button></Link>
         </div>
         <div className="dropdown">
-          <button className="dropbtn">Special Offers</button>
+        <Link to ="/search"><button className="dropbtn">Search</button></Link>
         </div>
         <div id="rightside">
           <div>
-            {user && <p id="loggeduser">{`Welcome ${user.username}`}</p>}
+            {user && <p id="loggeduser">{`Welcome ${user}`}</p>}
           </div>
           <div className="dropdown">
             <img alt="profile" id="profile" src={require("../assets/profile.png")} />

@@ -95,7 +95,8 @@ const Profile = ({ user, setter }) => {
                   className="updatebutton"
                   type="submit"
                 >
-                  Update Username
+
+                  Update<br></br>Username
                 </button>
               </div>
             </form>
@@ -118,7 +119,9 @@ const Profile = ({ user, setter }) => {
                   type="submit"
                   className="updatebutton"
                 >
-                  Update Email
+
+                  Update<br></br>Email
+
                 </button>
               </div>
             </form>
@@ -141,12 +144,15 @@ const Profile = ({ user, setter }) => {
                   className="updatebutton"
                   type="submit"
                 >
-                  Update Password
+
+                  Update<br></br>Password
+
                 </button>
               </div>
             </form>
           </div>
           <div className="formsContainer">
+
             <form onSubmit={submitHandler4}>
               <div className="buttonDiv">
                 <button
@@ -155,10 +161,12 @@ const Profile = ({ user, setter }) => {
                   type="submit"
                 >
                   Delete User
+
                 </button>
               </div>
             </form>
           </div>
+
         </div>
         <div className="orderContainer">
           <h1>Orders</h1>

@@ -35,7 +35,7 @@ const Header = ({ setter, user, basket }) => {
         </div>
         <div id="rightside">
           <div>
-            {user && <p id="loggeduser">{`Welcome ${user.username}`}</p>}
+            {user && <p id="loggeduser">{`Welcome ${user}`}</p>}
           </div>
           <div className="dropdown">
             <img alt="profile" id="profile" src={require("../assets/profile.png")} />

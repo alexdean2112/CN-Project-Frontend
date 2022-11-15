@@ -1,10 +1,15 @@
 import "../componentstyles/Checkout.css";
 import { createOrder } from "../utils/orderUtils";
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 
 const Checkout = ({ basket, atb, user }) => {
 
-  const [total, setTotal] = useState(0);
+  const prices = [];
+  const sumTotal = prices.reduce(sumUp)
+
+  const sumUp = (total, num) => {
+    return total + num;
+  }
 
   const checkoutHandler = () => {
     for (let i = 0; i < basket.length; i++) {
@@ -13,14 +18,9 @@ const Checkout = ({ basket, atb, user }) => {
     atb([]);
   };
 
-  const newPrice = (item) => {
-    const newTotal = total + item;
-    setTotal(newTotal);
-  }
-
   useEffect(() => {
     basket.map((item, index) => (
-      newPrice(item.price)
+      prices.push(item.price)
     ))
   }, [basket])
 
@@ -43,7 +43,7 @@ const Checkout = ({ basket, atb, user }) => {
         <div className="inner-box-lower">
           <div className="top-text">
             <h4>Estimated total</h4>
-            <h4>£{total}</h4>
+            <h4>£{sumTotal}</h4>
           </div>
           <p id="center">To finalise your order, select checkout below.</p>
           <div id="purchase">

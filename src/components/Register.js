@@ -12,7 +12,7 @@ export const Register = ({ setter }) => {
 
   useEffect(() => {
     const getUser = async () => {
-      const response = await fetch(`${process.env.REACT_APP_REST_API}loginUser`, {
+      const response = await fetch(`${process.env.REACT_APP_REST_API}/loginUser`, {
         method: "GET",
         headers: { "Content-Type": "application/json", Authorization: token },
       });
@@ -41,7 +41,7 @@ export const Register = ({ setter }) => {
   };
 
   return (
-    <form onSubmit={submitHandler}>
+    <form className="form" onSubmit={submitHandler}>
       <label>
         Username
         <input onChange={(e) => setUsername(e.target.value)} />
@@ -79,7 +79,7 @@ export const Login = ({ setter }) => {
   };
 
   return (
-    <form onSubmit={submitHandler}>
+    <form className="form" onSubmit={submitHandler}>
 
       <label>
         Username

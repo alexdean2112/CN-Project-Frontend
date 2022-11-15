@@ -16,7 +16,7 @@ input {
   border: solid 3px black;
 }
 
-form {
+.form {
   display: flex;
   justify-content: center;
   margin: auto;

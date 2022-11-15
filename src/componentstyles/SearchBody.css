@@ -1,109 +1,113 @@
-.gamecontainer{
-    display: flex;
-    flex-direction: row;
-    padding-top: 4vh;
-    margin-left: 10px;
-    margin-right: 10px;
-    height: 100vh;
+.full_body {
+  display: flex;
+  flex-direction: row;
+  margin: 5vh;
 }
+
 button {
-    background: #ffe600;
-    border-radius: 999px;
-    box-shadow: #08080b 0 10px 20px -10px;
-    box-sizing: border-box;
-    color: #000000;
-    cursor: pointer;
-    font-size: 20px;
-    font-weight: 700;
-    line-height: 24px;
-    opacity: 1;
-    outline: 0 solid transparent;
-    padding: 10px 20px;
-    user-select: none;
-    -webkit-user-select: none;
-    touch-action: manipulation;
-    width: fit-content;
-    word-break: break-word;
-    border: 0;
+  background: #ffe600;
+  border-radius: 999px;
+  box-shadow: #08080b 0 10px 20px -10px;
+  box-sizing: border-box;
+  color: #000000;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 24px;
+  opacity: 1;
+  outline: 0 solid transparent;
+  padding: 10px 20px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: fit-content;
+  word-break: break-word;
+  border: 0;
 }
 
 .buttons {
-    display: flex;
-    justify-content: space-between;
-    width: 50vw;
-    margin-left: 20%;
+  display: flex;
+  justify-content: space-between;
+  width: 50vw;
+  margin-left: 20%;
 }
 
-.filterComp{
-    display: flex;
-    flex-direction: column;
-    border: solid 1px black;
-    background-color: rgb(0, 0, 0, 0.3);
-    color: whitesmoke;
-    border-radius: 5px;
-    width: 30vw;
-    height: 53.2vh;
+.filterComp {
+  display: flex;
+  flex-direction: column;
+  border: solid 3px black;
+  background-color: rgb(0, 0, 0, 0.3);
+  color: whitesmoke;
+  border-radius: 15px;
+  width: 30vw;
+  height: 53.2vh;
 }
-.subComp{
-    display: flex;
-    border-top: solid 1px rgb(255, 255, 255);
-    margin: 20px;
+
+.subComp {
+  display: flex;
+  border-top: solid 1px rgb(255, 255, 255);
+  margin: 20px;
 }
-.filterTitle{
-    display: flex;
-    justify-content: center;
+.filterTitle {
+  display: flex;
+  justify-content: center;
 }
-.searchBar{
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    margin-left: 10px;
+.searchBar {
+  display: flex;
+  flex-direction: column;
+  margin-left: 30px;
 }
-input{
-    height: 1.5vh;
+input {
+  height: 1.5vh;
 }
-.popularGames{
-    display: flex;
-    flex-direction: column;
+
+.inputSearch {
+  width: 10vw;
 }
-.popularGame{
-    display: flex;
-    align-items: center;
-    border: solid 1px black;
-    background-color: rgb(0, 0, 0, 0.3);
-    color: whitesmoke;
-    border-radius: 5px;
-    margin-left: 10px;
-    margin-bottom: 10px;
-    font-size: 13px;
-    height: 10vh;
-    width: 70vw;
+
+.popularGames {
+  display: flex;
+  flex-direction: column;
 }
-.rank{
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    margin-left: 4vw;
-    width: 5vw;
+.popularGame {
+  display: flex;
+  align-items: center;
+  border: solid 3px black;
+  background-color: rgb(0, 0, 0, 0.3);
+  color: whitesmoke;
+  border-radius: 15px;
+  margin-left: 10px;
+  margin-bottom: 10px;
+  font-size: 13px;
+  height: 20vh;
+  width: 70vw;
 }
-.gameImg{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: solid 1px whitesmoke;
-    margin: 0px;
-    height: 9vh;
-    width: 22vw;
+.rank {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-left: 4vw;
+  width: 5vw;
 }
-.gameName{
-    display: flex;
-    margin-left: 20px;
-    width: 25vw;
+.gameImg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: solid 3px black;
+  border-radius: 15px;
+  margin: 0px;
+  height: 15vh;
+  width: 22vw;
 }
-.gamePrice{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-left: 10px;
+.gameName {
+  display: flex;
+  margin-left: 20px;
+  width: 25vw;
+}
+.gamePrice {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-left: 10px;
 }

@@ -1,6 +1,6 @@
 export const pullGames = async (gametitle, releasedate, summary, agerating, cover) => {
     try {
-        const response = await fetch( "http://localhost:5001/getGames", {
+        const response = await fetch( `${process.env.REACT_APP_REST_API}getGames`, {
             method: "POST",
             headers: {
                         "Content-Type": "application/json",
@@ -15,7 +15,7 @@ export const pullGames = async (gametitle, releasedate, summary, agerating, cove
 
 export const pullPlatform = async (platform) => {
     try {
-        const response = await fetch( "http://localhost:5001/getPlatform", {
+        const response = await fetch( `${process.env.REACT_APP_REST_API}getPlatform`, {
             method: "POST",
             headers: {
                         "Content-Type": "application/json",

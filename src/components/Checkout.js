@@ -1,13 +1,13 @@
 import "../componentstyles/Checkout.css";
 import { createOrder } from "../utils/orderUtils";
 
-const Checkout = ({ basket, atb }) => {
+const Checkout = ({ basket, atb, user }) => {
 
   const checkoutHandler = () => {
-    basket.map((item, index) => (
-      createOrder(item.title, item.price)
-    ))
-    atb([])
+    for (let i = 0; i < basket.length; i++) {
+      createOrder(basket[i].title, basket[i].price, user)
+    };
+    atb([]);
   };
   return (
     <div>

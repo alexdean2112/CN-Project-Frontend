@@ -2,7 +2,7 @@
   background-color: black;
   color: #dfba36;
   height: 20vh;
-  width: 100vw;
+  width: 100%;
   display: flex;
   flex-direction: column;
   bottom: 0px;
@@ -11,7 +11,7 @@
 
 .wrapper_footer_top {
   display: flex;
-  margin-top: 40px;
+  /* margin-top: 40px; */
   justify-content: space-evenly;
   height: 80%;
 }

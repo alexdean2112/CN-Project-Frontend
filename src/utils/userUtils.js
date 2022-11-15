@@ -2,7 +2,7 @@ import { writeCookie, getCookie } from "../common";
 
 export const createUser = async (username, email, password, setter) => {
   try {
-    const response = await fetch(`${process.env.REACT_APP_REST_API}createUser`, {
+    const response = await fetch(`http://localhost:5001/createUser`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
@@ -22,12 +22,11 @@ export const createUser = async (username, email, password, setter) => {
 
 export const readUsers = async (token) => {
   try {
-    const response = await fetch(`${process.env.REACT_APP_REST_API}readUsers`, {
+    const response = await fetch(`http://localhost:5001/readUsers`, {
       method: "GET",
       headers: {
-        "Content-Type":
-          "application/json",
-          "Authorization": `Bearer ${token}`,
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${token}`,
       },
     });
     const data = await response.json();
@@ -42,11 +41,11 @@ export const readUsers = async (token) => {
 export const findUser = async (token) => {
   try {
     const token = getCookie("jwt_token");
-    const response = await fetch(`${process.env.REACT_APP_REST_API}loginUser`, {
+    const response = await fetch(`http://localhost:5001/loginUser`, {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
-        "Authorization": `Bearer ${token}`,
+        Authorization: `Bearer ${token}`,
       },
     });
     const data = await response.json();
@@ -58,19 +57,18 @@ export const findUser = async (token) => {
 
 export const updateUser = async (user, key, value, token) => {
   try {
-    const response = await fetch(`${process.env.REACT_APP_REST_API}updateUser`, {
+    const response = await fetch(`http://localhost:5001/updateUser`, {
       method: "PUT",
       headers: {
-        "Content-Type":
-          "application/json",
-          "Authorization": `Bearer ${token}`,
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${token}`,
       },
       body: JSON.stringify({
         filter: {
-          "username": user
+          username: user,
         },
         update: {
-          [key]: value
+          [key]: value,
         },
       }),
     });
@@ -83,15 +81,14 @@ export const updateUser = async (user, key, value, token) => {
 
 export const deleteUser = async (user, token) => {
   try {
-    const response = await fetch(`${process.env.REACT_APP_REST_API}deleteUser`, {
+    const response = await fetch(`http://localhost:5001/deleteUser`, {
       method: "DELETE",
       headers: {
-        "Content-Type":
-          "application/json",
-          "Authorization": `Bearer ${token}`,
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${token}`,
       },
       body: JSON.stringify({
-        "username": user,
+        username: user,
       }),
     });
     const data = await response.json();
@@ -104,11 +101,11 @@ export const deleteUser = async (user, token) => {
 export const loginUser = async (username, email, password, setter, token) => {
   try {
     const token = getCookie("jwt_token");
-    const response = await fetch(`${process.env.REACT_APP_REST_API}loginUser`, {
+    const response = await fetch(`http://localhost:5001/loginUser`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        "Authorization": `Bearer ${token}`,
+        Authorization: `Bearer ${token}`,
       },
       body: JSON.stringify({
         username: username,

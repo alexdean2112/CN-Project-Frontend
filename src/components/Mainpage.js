@@ -20,7 +20,7 @@ const Mainpage = ({passedGameData, setPassedGameData, basket, setBasket}) => {
         <div className='mainbody'>
             <div className="carousalContainer">
                 <div className="carousal">
-                    <img src={require("../assets/Carousel.png")} alt="Carousel image" />
+                    <img src={require("../assets/Carousel.png")} alt="Carousel" />
                 </div>
             </div>
             <div className="categories">

@@ -16,7 +16,7 @@ export const pullGames = async (gametitle, releasedate, summary, agerating, cove
 
 export const pullPlatform = async (platform) => {
     try {
-        const response = await fetch( `${process.env.REACT_APP_REST_API}getPlatform`, {
+        const response = await fetch(`${process.env.REACT_APP_REST_API}getPlatform`, {
 
             method: "POST",
             headers: {
@@ -33,7 +33,7 @@ export const pullPlatform = async (platform) => {
 
 export const pullTopRated = async (gametitle, releasedate, summary, agerating, cover) => {
     try {
-        const response = await fetch( `${process.env.REACT_APP_REST_API}getTopRated`, {
+        const response = await fetch(`${process.env.REACT_APP_REST_API}getTopRated`, {
             method: "POST",
             headers: {
                         "Content-Type": "application/json",
@@ -48,7 +48,7 @@ export const pullTopRated = async (gametitle, releasedate, summary, agerating, c
 
 export const pullLatest = async (gametitle, releasedate, summary, agerating, cover) => {
     try {
-        const response = await fetch( `${process.env.REACT_APP_REST_API}getLatest`, {
+        const response = await fetch(`${process.env.REACT_APP_REST_API}getLatest`, {
             method: "POST",
             headers: {
                         "Content-Type": "application/json",

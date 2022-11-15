@@ -6,7 +6,7 @@ export const pullGames = async (
   cover
 ) => {
   try {
-    const response = await fetch(`http://localhost:5001/getGames`, {
+    const response = await fetch(`${process.env.REACT_APP_REST_API}getGames`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -21,7 +21,7 @@ export const pullGames = async (
 
 export const pullPlatform = async (platform) => {
   try {
-    const response = await fetch(`http://localhost:5001/getPlatform`, {
+    const response = await fetch(`${process.env.REACT_APP_REST_API}getPlatform`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -43,7 +43,7 @@ export const pullTopRated = async (
   cover
 ) => {
   try {
-    const response = await fetch(`http://localhost:5001/getTopRated`, {
+    const response = await fetch(`${process.env.REACT_APP_REST_API}getTopRated`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -64,7 +64,7 @@ export const pullLatest = async (
   cover
 ) => {
   try {
-    const response = await fetch(`http://localhost:5001/getLatest`, {
+    const response = await fetch(`${process.env.REACT_APP_REST_API}getLatest`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

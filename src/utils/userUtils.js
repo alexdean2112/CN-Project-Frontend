@@ -22,7 +22,7 @@ export const createUser = async (username, email, password, setter) => {
 
 export const readUsers = async (token) => {
   try {
-    const response = await fetch("http://localhost:5001/readUsers", {
+    const response = await fetch(`${process.env.REACT_APP_REST_API}readUsers`, {
       method: "GET",
       headers: {
         "Content-Type":
@@ -42,7 +42,7 @@ export const readUsers = async (token) => {
 export const findUser = async (token) => {
   try {
     const token = getCookie("jwt_token");
-    const response = await fetch("http://localhost:5001/loginUser", {
+    const response = await fetch(`${process.env.REACT_APP_REST_API}loginUser`, {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
@@ -58,7 +58,7 @@ export const findUser = async (token) => {
 
 export const updateUser = async (user, key, value, token) => {
   try {
-    const response = await fetch("http://localhost:5001/updateUser", {
+    const response = await fetch(`${process.env.REACT_APP_REST_API}updateUser`, {
       method: "PUT",
       headers: {
         "Content-Type":
@@ -83,7 +83,7 @@ export const updateUser = async (user, key, value, token) => {
 
 export const deleteUser = async (user, token) => {
   try {
-    const response = await fetch("http://localhost:5001/deleteUser", {
+    const response = await fetch(`${process.env.REACT_APP_REST_API}deleteUser`, {
       method: "DELETE",
       headers: {
         "Content-Type":
@@ -104,7 +104,7 @@ export const deleteUser = async (user, token) => {
 export const loginUser = async (username, email, password, setter, token) => {
   try {
     const token = getCookie("jwt_token");
-    const response = await fetch("http://localhost:5001/loginUser", {
+    const response = await fetch(`${process.env.REACT_APP_REST_API}loginUser`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

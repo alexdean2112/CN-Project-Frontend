@@ -135,6 +135,7 @@ const Profile = ({ user, setter }) => {
 
             </div>
         </div>
+    </div>
     )
 }
 

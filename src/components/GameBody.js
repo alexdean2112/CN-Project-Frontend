@@ -1,25 +1,48 @@
+import '../componentstyles/GameBody.css'
 
+const GameBody = ({ atb, basket, setBasket, passedGameData }) => {
+  console.log(passedGameData)
+  const object = { title: passedGameData[1].title, price: passedGameData[1].price };
+    
+    
+    const addGame = (e) => {
+      e.preventDefault();
+      const temp = [...basket];
+      temp.push(object);
+      atb(temp);
+      console.log(basket)
+    };
+  
+    
+    
+      return (
+          <div id="gamebody">
+              <div className="gamecard">
+                  <div className="gamecover">
+                      <img id='picplace' alt="cover of the game" src={require('../assets/gow.jpg')}></img>
+                  </div>
+                  <div className='infoContainer'>
+                      <div className="info">
+                      <div className='infoTag'>
+                          <h1>Title:{passedGameData[1].title}</h1>
+                      </div>
+                      <div className='infoTag'>
+                          <h1>Price:{passedGameData[1].price}</h1>
+                  </div>
+                  <div className="description">
+                      <p>Summary: {passedGameData[1].summary}</p>
+                  </div>
+                  <div className="buttonContainer">
+                    <button className="addBasketBtn" onClick={addGame}>
+                       Add to basket
+                     </button>
+                     </div>
+                    </div>
+                  </div>
+              </div>
+      </div>
+    );
+  };
+  
+  export default GameBody;
 
-const GameBody = ({title,genre,price,rating}) =>{
-    return (
-        <div id = "gamebody">
-            <img alt = "gmaebackground" src ={require("../assets/background_texture.png")}></img>
-            <img alt = "box" src ={require("../assets/box_texture.png")}></img>
-            <div className="gamecard">
-                {/* <div className="gameCover">
-                    <img>Game cover here, pull from API?</img>
-                </div> */}
-                <div className="info">
-                    <h1>Title:{title}, Genre:{genre}</h1>
-                    <h1>Price:{price}, Rating:{rating}</h1>
-                </div>
-                <div className="description">
-                    <p>will pull from API later</p>
-                </div>
-                <button className="addBasketBtn">Add to basket</button>
-            </div>
-        </div>
-    )
-}
-
-export default GameBody

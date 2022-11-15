@@ -1,3 +1,5 @@
-/* #gamebody{
-    background-color: black;
-} */
+
+body{
+  overflow-x:hidden
+}
+

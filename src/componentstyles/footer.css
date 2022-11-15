@@ -1,13 +1,17 @@
 .FooterFull {
-  background-color: blue;
+  background-color: black;
+  color: #dfba36;
   height: 20vh;
-  width: 100vw;
+  width: 100%;
   display: flex;
   flex-direction: column;
+  bottom: 0px;
+  position: relative;
 }
 
 .wrapper_footer_top {
   display: flex;
+  /* margin-top: 40px; */
   justify-content: space-evenly;
   height: 80%;
 }
@@ -19,13 +23,14 @@
 
 .barrybeeimage {
   object-fit: contain;
-  height: 100%;
-  width: 100%;
+  height: 60%;
+  width: 60%;
 }
 
 .wrapper_footer_bottom {
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 
 .twitLogob {

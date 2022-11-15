@@ -1,13 +1,12 @@
-export const createOrder = async (orderId, userId, itemName, itemPrice) => {
+export const createOrder = async (itemName, itemPrice, user) => {
     try {
-        const response = await fetch( "http://localhost:5001/createOrder", {
+        const response = await fetch( `${process.env.REACT_APP_REST_API}createOrder`, {
             method: "POST",
             headers: {"Content-Type": "application/json"},
             body: JSON.stringify({
-                "orderId": orderId,
-                "userId": userId,
                 "itemName": itemName,
-                "itemPrice": itemPrice
+                "itemPrice": itemPrice,
+                "user": user,
             })
         })
         const data = await response.json()
@@ -17,16 +16,17 @@ export const createOrder = async (orderId, userId, itemName, itemPrice) => {
     }
 }
 
-export const readOrders = async () => {
+export const readOrders = async (user) => {
     try {
-        const response = await fetch( "http://localhost:5001/readOrders", {
-            method: "GET",
+        const response = await fetch( `${process.env.REACT_APP_REST_API}readOrders`, {
+            method: "POST",
             headers: {"Content-Type": "application/json"},
+            body: JSON.stringify({
+                "user": user,
+            })
         })
-        const data = await response.json()
-        console.log(data.orders)
-        const orderData = data.orders.map(orders => orders.orderId, orders.userId, orders.itemName, orders.itemPrice)
-        return orderData
+        const data = await response.json();
+        return data.order;
     } catch (error) {
         console.log(error)
     }
@@ -34,7 +34,7 @@ export const readOrders = async () => {
 
 export const updateOrder = async (username, password) => {
     try {
-        const response = await fetch( "http://localhost:5001/updateOrder", {
+        const response = await fetch( `${process.env.REACT_APP_REST_API}updateOrder`, {
             method: "PUT",
     headers: {"Content-Type": "application/json"},
             body: JSON.stringify(
@@ -56,7 +56,7 @@ export const updateOrder = async (username, password) => {
 
 export const deleteOrder = async (orderId) => {
     try {
-        const response = await fetch( "http://localhost:5001/deleteOrder", {
+        const response = await fetch( `${process.env.REACT_APP_REST_API}deleteOrder`, {
             method: "DELETE",
             headers: {"Content-Type": "application/json"},
             body: JSON.stringify({

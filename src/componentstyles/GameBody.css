@@ -1,3 +1,105 @@
 #gamebody{
-    background-color: darkgrey;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: solid 5px white; */
+    margin: 10px;
+    height: 70vh;
+}
+.gamecard{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    background-color:rgb(79, 109, 126, 0.5);
+    box-shadow: #08080b 0 10px 20px -10px;
+    border: solid 2px black;
+    border-radius: 10px;
+    height: 50vh;
+    width: 90vw;
+
+}
+.gamecover{
+    /* border: solid 2px white; */
+    border-radius: 15px;
+    height: 80%;
+    width: auto;
+    margin-top: 70px;
+    margin-left: 50px;
+}
+.gamecover img{
+    display: flex;
+    box-shadow: #08080b 0 10px 20px -10px;
+    height: 100%;
+    width: auto;
+    border-radius: 15px;
+}
+.infoContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* border: solid 1px white; */
+    margin-top: 70px;
+    margin-right: 50px;
+    height: 80%;
+    width: 100%;
+}
+.info{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    /* border: solid 1px white; */
+    border-radius: 15px;
+    color: rgb(7, 7, 7);
+    height: 95%;
+    width: 95%;
+}
+.infoTag{
+    display: flex;
+    font-size: 10px;
+    width: 90%;
+    /* border: solid 1px white; */
+}
+.description{
+    border: solid 2px black;
+    border-radius: 15px;
+    box-shadow: #08080b 0 10px 20px -10px;
+    font-size: 20px;
+    color: aliceblue;
+    margin: 10px;
+    height: 60%;
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.addBasketBtn{
+    background: #ffe600;
+    border-radius: 10vw;
+    box-shadow: #08080b 0 10px 20px -10px;
+    box-sizing: border-box;
+    color: #000000;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 34px;
+    opacity: 1;
+    outline: 0 solid transparent;
+    padding: 5px 20px;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    width: fit-content;
+    word-break: break-word;
+    border: solid 1px black;
+}
+.buttonContainer{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    font-size: 30px;
+    height: 10%;
+    width: 90%;
+    margin-bottom: 10px;
+    /* border: solid 1px white; */
 }

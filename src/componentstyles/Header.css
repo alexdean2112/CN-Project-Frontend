@@ -11,6 +11,7 @@
 
   #banner{
     width: 100%;
+    cursor: pointer;
   }
 
   #profile{
@@ -24,7 +25,10 @@
 
   #rightside {
     display: flex;
+    align-items: center;
     flex-direction: row;
+    margin-right: 10px;
+    /* border: solid 1px white; */
   }
 
 #banner{
@@ -55,7 +59,6 @@
   .dropdown {
     float:left;
     overflow: hidden;
-    
   }
   
   .dropdown .dropbtn {
@@ -70,19 +73,29 @@
   }
   
   .navbar a:hover, .dropdown:hover .dropbtn {
-    background-color: rgb(216, 115, 0);
+    background-color: rgb(145, 77, 0);
   }
   
   .dropdown-content {
     display: none;
+    right:0;
+    left: auto;
     position: absolute;
-    background-color: #f9f9f9;
-    min-width: 140px;
+    background-color: rgb(58, 58, 58);
+    border: solid 1px black;
+    width: 13vw;
+    padding-bottom: 10px;
+    /* min-width: 150px; */
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
-    padding-left: 10px;
   }
-  
+.dropdownEdit{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* margin: 10px; */
+}
   .dropdown-content a {
     float: none;
     color: black;
@@ -100,13 +113,4 @@
     display: block;}
 
 
-    @media screen and (width: 1800px) {
-        .body {
-            background-color: black;
-            width: 100%;
-            height: 22vh;
-            border-bottom-style: solid;
-            border-bottom-color:antiquewhite ;
-          }
-      }
  

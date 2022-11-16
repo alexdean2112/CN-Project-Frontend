@@ -18,7 +18,7 @@ export const createOrder = async (itemName, itemPrice, user) => {
 
 export const readOrders = async (user) => {
     try {
-        const response = await fetch(`http://localhost:5001/readOrders`, {
+        const response = await fetch(`${process.env.REACT_APP_REST_API}readOrders`, {
             method: "POST",
             headers: {"Content-Type": "application/json"},
             body: JSON.stringify({
@@ -34,7 +34,7 @@ export const readOrders = async (user) => {
 
 export const updateOrder = async (username, password) => {
     try {
-        const response = await fetch(`http://localhost:5001/updateOrder`, {
+        const response = await fetch(`${process.env.REACT_APP_REST_API}updateOrder`, {
             method: "PUT",
     headers: {"Content-Type": "application/json"},
             body: JSON.stringify(
@@ -56,7 +56,7 @@ export const updateOrder = async (username, password) => {
 
 export const deleteOrder = async (orderId) => {
     try {
-        const response = await fetch(`http://localhost:5001/deleteOrder`, {
+        const response = await fetch(`${process.env.REACT_APP_REST_API}deleteOrder`, {
             method: "DELETE",
             headers: {"Content-Type": "application/json"},
             body: JSON.stringify({

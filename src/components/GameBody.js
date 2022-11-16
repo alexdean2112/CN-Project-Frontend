@@ -22,19 +22,19 @@ const GameBody = ({ atb, basket, setBasket, passedGameData }) => {
           <img
             id="picplace"
             alt="cover of the game"
-            src={require("../assets/gow.jpg")}
+            src={require("../assets/noimage.png")}
           ></img>
         </div>
         <div className="infoContainer">
           <div className="info">
             <div className="infoTag">
-              <h1>Title: {passedGameData[1].title}</h1>
+              <p id="text">Title: {passedGameData[1].title}</p>
             </div>
             <div className="infoTag">
-              <h1>Price: £{passedGameData[1].price}</h1>
+              <p id="text">Price: £{passedGameData[1].price}</p>
             </div>
             <div className="description">
-              <p>Summary: {passedGameData[1].summary}</p>
+              <p id="summarytext">Summary: {passedGameData[1].summary}</p>
             </div>
             <div className="buttonContainer">
               <button className="addBasketBtn" onClick={addGame}>

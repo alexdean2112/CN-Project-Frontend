@@ -7,7 +7,7 @@
   width: 80vw;
   border: solid black 5px;
   background-color: rgba(78, 78, 78, 0.8);
-  box-shadow: #08080b 0 20px 30px -10px;
+  box-shadow: 3px 3px rgb(0, 0, 0);
   margin: 5vh 0 5vh 10vw;
   border-radius: 15px;
   color: white;
@@ -20,6 +20,7 @@
   align-items: center;
   height: 20%;
   width: 95%;
+
 }
 
 .profile_label{
@@ -33,32 +34,30 @@
 
 .imageContainer {
   display: flex;
-  height: 16vh;
-  width: 20vw;
-  margin-right: 5vw;
+  height: 21vh;
+  
 }
 
 .imageContainer img {
-  height: 15vh;
+  height: 20vh;
   width: auto;
   margin-top: 25px;
-  box-shadow: #08080b 0 10px 20px -10px;
-  border: 3px solid black;
-  border-radius: 15px;
+  border: #c7b300 thick solid;
 }
 
 .test {
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-size: 1.2vh;
-  margin-top: 30px;
-  height: 12vh;
-  width: 30vw;
+  font-size: 2vh;
+  margin-top: 7vh;
+  margin-left:1vw;
+  height: 14vh;
+  width: 15vw;
   background-color: rgba(58, 58, 58, 0.37);
-  border-radius: 15px;
-  box-shadow: #08080b 0 20px 30px -10px;
-  border: 3px solid black;
+  box-shadow: 3px 3px black;
+  border: #c7b300 thick solid;
+  border-radius: 10px;
 }
 
 .user_title {
@@ -91,10 +90,13 @@
   align-items: center;
   height: 30vh;
   width: 78vw;
+  margin-top: 3vh;
+  overflow: auto;
+  overflow-x:hidden;
   background-color: rgba(58, 58, 58, 0.37);
-  border-radius: 15px;
-  box-shadow: #08080b 0 20px 30px -10px;
-  border: 3px solid black;
+  box-shadow: 3px 3px black;
+  border: #c7b300 thick solid;
+  border-radius: 10px;
 }
 
 .formsOuter {
@@ -106,9 +108,9 @@
   width: 78vw;
   margin-bottom: 20px;
   background-color: rgba(58, 58, 58, 0.37);
-  border-radius: 15px;
-  box-shadow: #08080b 0 10px 30px -10px;
-  border: 3px solid black;
+  box-shadow: 3px 3px black;
+  border: #c7b300 thick solid;
+  border-radius: 10px;
 }
 
 .formMiddle {
@@ -172,3 +174,24 @@
 .deletebutton{
   height: 7vh;
 }
+
+
+::-webkit-scrollbar {
+  width: 10px;
+  border-radius: 15px;
+}
+
+::-webkit-scrollbar-track {
+  background: #a7a7a7;
+  border-radius: 15px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #817400b7;
+  border-radius: 15px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #ffe600;
+    border-radius: 15px;
+  }

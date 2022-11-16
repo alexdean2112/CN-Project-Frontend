@@ -2,7 +2,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 10px;
+    margin-top: 4vh;
+    margin-bottom: 4vh;
     height: 70vh;
 }
 .gamecard{
@@ -10,27 +11,27 @@
     justify-content: space-between;
     flex-direction: row;
     background-color:rgb(79, 109, 126, 0.5);
-    box-shadow: #08080b 0 10px 20px -10px;
-    border: solid 2px black;
+    box-shadow: 3px 3px black;
+    border: solid 5px black;
     border-radius: 10px;
-    height: 50vh;
+    height: 55vh;
     width: 90vw;
-
 }
 .gamecover{
     border-radius: 15px;
     height: 80%;
     width: auto;
-    margin-top: 70px;
-    margin-left: 50px;
+    margin-top: 3.5vh;
+    margin-left: 2vw;
 }
 
 .gamecover img{
     display: flex;
-    box-shadow: #08080b 0 10px 20px -10px;
     height: 100%;
     width: auto;
     border-radius: 15px;
+    border: #c7b300 thick solid;
+    box-shadow: 3px 3px black;
 }
 
 .infoContainer{
@@ -38,10 +39,11 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 70px;
+    margin-top: 3.5vh;
     margin-right: 50px;
-    height: 80%;
-    width: 100%;
+    height: auto;
+    width: 80vw;
+    margin-bottom: 6vh;
 }
 
 .info{
@@ -56,28 +58,40 @@
 
 .infoTag{
     display: flex;
-    font-size: 10px;
+    font-size: 1.6vh;
     width: 90%;
+    color:white;
+}
+
+#text{
+    font-size: 4vh;
+    text-shadow: 2px 2px black;
 }
 
 .description{
-    border: solid 2px black;
-    border-radius: 15px;
-    box-shadow: #08080b 0 10px 20px -10px;
-    font-size: 20px;
+    border: #c7b300 thick solid;
+    border-radius: 10px;
+    box-shadow: 3px 3px black;
     color: aliceblue;
-    margin: 10px;
-    height: 60%;
+    min-height: 15vh;
+    max-height: 15vh;
     width: 90%;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    overflow: auto;
+    padding: 0.8vh;
+}
+
+#summarytext {
+    text-shadow: 2px 2px black;
+    font-size: 2.5vh;
 }
 
 .addBasketBtn{
     background: #ffe600;
     border-radius: 10vw;
-    box-shadow: #08080b 0 10px 20px -10px;
+    box-shadow: 3px 3px black;
     box-sizing: border-box;
     color: #000000;
     cursor: pointer;
@@ -93,6 +107,7 @@
     width: fit-content;
     word-break: break-word;
     border: solid 1px black;
+    margin-top:3vh;
 }
 
 .buttonContainer{

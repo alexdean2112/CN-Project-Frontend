@@ -5,7 +5,7 @@ import { useEffect } from "react";
 import { getCookie } from "../common";
 import { useNavigate } from "react-router-dom";
 
-const TopRatedPage = ({ setter, user, passedGameData, setPassedGameData }) => {
+const TopRatedPage = ({ setter, user, passedGameData, setPassedGameData, basket }) => {
 
   const navigate = useNavigate();
   useEffect(() => {
@@ -30,7 +30,7 @@ const TopRatedPage = ({ setter, user, passedGameData, setPassedGameData }) => {
 
   return (
     <div>
-      <Header user={user} setter={setter} />
+      <Header user={user} setter={setter} basket={basket} />
       <TopRated passedGameData={passedGameData} setPassedGameData={setPassedGameData}/>
       <Footer />
     </div>

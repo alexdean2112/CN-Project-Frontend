@@ -61,8 +61,12 @@ const Profile = ({ user, setter }) => {
           <img src={require("../assets/profilebanner.png")} alt="placeholder" />
         </div>
         <div className="test">
-          <h1>User Details</h1>
-          <p>Username: Placeholder</p>
+          <div className="user_title">
+            <h1 className="user_h1">User Details</h1>
+          </div>
+          <div className="user_username">
+            <p>Username: {user}</p>
+          </div>
         </div>
       </div>
       <div className="orderContainer">
@@ -70,7 +74,7 @@ const Profile = ({ user, setter }) => {
           {orders?.length > 0 ? (
             orders.map((item, index) => (
               <p>
-                {item.itemName}, {item.itemPrice}
+                {item.itemName}, £{item.itemPrice}.00
               </p>
             ))
           ) : (
@@ -79,12 +83,12 @@ const Profile = ({ user, setter }) => {
         </div>
       <div className="formsOuter">
         <div className="updateTitle">
-          <h1>Update Information</h1>
+          <h1 className="update_info">Update Information</h1>
         </div>
         <div className="formMiddle">
           <div className="formsContainer">
             <form className="profileForm" onSubmit={submitHandler1}>
-              <label>
+              <label className="profile_label">
                 <br></br>
                 <input
                   className="updateinput"
@@ -107,7 +111,7 @@ const Profile = ({ user, setter }) => {
           </div>
           <div className="formsContainer">
             <form className="profileForm" onSubmit={submitHandler2}>
-              <label>
+              <label className="profile_label">
                 <br></br>
                 <input
                   className="updateinput"
@@ -132,7 +136,7 @@ const Profile = ({ user, setter }) => {
           </div>
           <div className="formsContainer">
             <form className="profileForm" onSubmit={submitHandler3}>
-              <label>
+              <label className="profile_label">
                 <br></br>
                 <input
                   className="updateinput"
@@ -161,7 +165,7 @@ const Profile = ({ user, setter }) => {
               <div className="buttonDiv">
                 <button
                   onClick={submitHandler4}
-                  className="updatebutton"
+                  className="updatebutton deletebutton"
                   type="submit"
                 >
                   Delete User

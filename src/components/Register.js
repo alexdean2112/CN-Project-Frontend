@@ -41,28 +41,30 @@ export const Register = ({ setter }) => {
   };
 
   return (
-    <form className="form" onSubmit={submitHandler}>
-      <label>
-        Username
-        <input onChange={(e) => setUsername(e.target.value)} />
-      </label>
+    <div className="form1">
+      <form onSubmit={submitHandler}>
+        <label className="label">
+          Username
+          <input onChange={(e) => setUsername(e.target.value)} />
+        </label>
 
-      <label>
-        Email
-        <input onChange={(e) => setEmail(e.target.value)} />
-      </label>
+        <label className="label">
+          Email
+          <input onChange={(e) => setEmail(e.target.value)} />
+        </label>
 
-      <label>
-        Password
-        <input onChange={(e) => setPassword(e.target.value)} />
-      </label>
+        <label className="label">
+          Password
+          <input onChange={(e) => setPassword(e.target.value)} />
+        </label>
 
-      <button type="submit">Register account</button>
-    </form>
+        <button type="submit">Register account</button>
+      </form>
+    </div>
   );
 };
 
-export const Login = ({ setter }) => {
+export const Login = ({ setter, setMessage }) => {
   const [username, setUsername] = useState();
   const [email, setEmail] = useState();
   const [password, setPassword] = useState();
@@ -74,29 +76,40 @@ export const Login = ({ setter }) => {
     if (data.token) {
       navigate("/home");
     } else {
-      console.log("User details knackered.");
+      setMessage(data.error)
     }
   };
 
   return (
-    <form className="form" onSubmit={submitHandler}>
+    <div className="form2">
+      <form onSubmit={submitHandler}>
 
-      <label>
-        Username
-        <input onChange={(event) => setUsername(event.target.value)} />
-      </label>
+        <label className="label">
+          Username
+          <input onChange={(event) => setUsername(event.target.value)} />
+        </label>
 
-      <label>
-        Email
-        <input onChange={(event) => setEmail(event.target.value)} />
-      </label>
+        <label className="label">
+          Email
+          <input onChange={(event) => setEmail(event.target.value)} />
+        </label>
 
-      <label>
-        Password
-        <input onChange={(event) => setPassword(event.target.value)} />
-      </label>
+        <label className="label">
+          Password
+          <input onChange={(event) => setPassword(event.target.value)} />
+        </label>
 
-      <button type="submit">Login</button>
-    </form>
+        <button id="relative-button" type="submit">Login</button>
+
+      </form>
+    </div>
   );
 };
+
+export const CorrectInfo = ({ message }) => {
+  return (
+      <div className="message-p">
+        {message && <p id="login-message">{message}</p>}
+      </div>
+  )
+}

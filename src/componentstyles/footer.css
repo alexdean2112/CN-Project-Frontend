@@ -11,7 +11,6 @@
 
 .wrapper_footer_top {
   display: flex;
-  /* margin-top: 40px; */
   justify-content: space-evenly;
   height: 80%;
 }

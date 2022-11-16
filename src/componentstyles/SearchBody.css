@@ -48,15 +48,18 @@ button {
   border-top: solid 1px rgb(255, 255, 255);
   margin: 20px;
 }
+
 .filterTitle {
   display: flex;
   justify-content: center;
 }
+
 .searchBar {
   display: flex;
   flex-direction: column;
   margin-left: 30px;
 }
+
 input {
   height: 1.5vh;
 }
@@ -69,6 +72,7 @@ input {
   display: flex;
   flex-direction: column;
 }
+
 .popularGame {
   display: flex;
   align-items: center;
@@ -82,6 +86,7 @@ input {
   height: 20vh;
   width: 70vw;
 }
+
 .rank {
   display: flex;
   justify-content: flex-start;
@@ -89,6 +94,7 @@ input {
   margin-left: 4vw;
   width: 5vw;
 }
+
 .gameImg {
   display: flex;
   justify-content: center;
@@ -99,11 +105,13 @@ input {
   height: 15vh;
   width: 22vw;
 }
+
 .gameName {
   display: flex;
   margin-left: 20px;
   width: 25vw;
 }
+
 .gamePrice {
   display: flex;
   flex-direction: column;

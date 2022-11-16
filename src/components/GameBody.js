@@ -28,10 +28,10 @@ const GameBody = ({ atb, basket, setBasket, passedGameData }) => {
         <div className="infoContainer">
           <div className="info">
             <div className="infoTag">
-              <h1>Title:{passedGameData[1].title}</h1>
+              <h1>Title: {passedGameData[1].title}</h1>
             </div>
             <div className="infoTag">
-              <h1>Price:{passedGameData[1].price}</h1>
+              <h1>Price: £{passedGameData[1].price}</h1>
             </div>
             <div className="description">
               <p>Summary: {passedGameData[1].summary}</p>

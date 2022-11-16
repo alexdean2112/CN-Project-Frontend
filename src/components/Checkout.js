@@ -16,6 +16,10 @@ const Checkout = ({ basket, atb, user }) => {
     atb([]);
   };
 
+  const clearBasket = () => {
+    atb([])
+  }
+
   return (
     <div>
       <h1>YOUR SHOPPING CART</h1>
@@ -45,6 +49,7 @@ const Checkout = ({ basket, atb, user }) => {
           </div>
           <p id="center">To finalise your order, select checkout below.</p>
           <div id="purchase">
+            <button id="give-me-space" onClick={clearBasket} >CANCEL ORDER</button>
             <button id="padded-button" onClick={checkoutHandler}>
               CHECKOUT
             </button>

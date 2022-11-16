@@ -106,3 +106,7 @@ button {
   display: flex;
   width: 4vw;
 }
+
+#give-me-space {
+  margin-right: 10px;
+}

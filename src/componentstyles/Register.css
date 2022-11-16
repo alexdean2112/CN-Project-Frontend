@@ -16,17 +16,55 @@ input {
   border: solid 3px black;
 }
 
-.form {
+.form1 {
   display: flex;
+  z-index: 99999;
   justify-content: center;
+  position: absolute;
   margin: auto;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
-  height: 30%;
+  height: 60%;
   width: 30%;
   /* border: solid 1px black; */
   color: rgb(244, 244, 11);
   font-size: 20px;
   /* background-color: rgb(0, 0, 0, 0.6); */
   /* border: solid 1px white; */
+}
+
+.form2 {
+  display: flex;
+  justify-content: flex-end;
+  position: absolute;
+  margin: auto;
+  flex-direction: row;
+  align-items: center;
+  height: 60%;
+  width: 40%;
+  /* border: solid 1px black; */
+  color: rgb(244, 244, 11);
+  font-size: 20px;
+  /* background-color: rgb(0, 0, 0, 0.6); */
+  /* border: solid 1px white; */
+}
+
+.message-p {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  justify-content: flex-end;
+  height: 40vh;
+  padding-left: 1.5vw;
+}
+
+#relative-button {
+  position: relative; left: 1.9vw;
+}
+
+#login-message {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-weight: 800;
+  font-size: 25px;
+  color: rgb(244, 244, 11);
 }

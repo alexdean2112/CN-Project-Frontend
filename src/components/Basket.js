@@ -5,6 +5,13 @@ import { Link } from "react-router-dom";
 
 const Basket = ({ basket, atb }) => {
   const [show, setShow] = useState(false);
+  const prices = [];
+
+  const addUp = () => {
+    const sum = prices.reduce((partialSum, a) => partialSum + a, 0)
+    return sum;
+  };
+
   return (
     <UltraContainer>
       <YellowButton>
@@ -22,17 +29,20 @@ const Basket = ({ basket, atb }) => {
               </SideTitle>
               {basket && (
                 <Items>
-                  {basket.map((item, index) => (
+                  {basket.map((item, index) => {
+                    prices.push(parseInt(item.price))
+                    return(
                     <Content>
                       <p>{item.title}</p>
                       <p>£{item.price}</p>
                     </Content>
-                  ))}
+                    )
+                    })}
                 </Items>
               )}
               <Total>
                 <h1>Total :</h1>
-                <h1>£ - -</h1>
+                <h1>£{addUp()}.00</h1>
               </Total>
             </Sidecontent>
             <Sidefooter>

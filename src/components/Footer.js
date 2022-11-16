@@ -69,7 +69,7 @@ const Footer = () => {
           © 2022 thebeesknees.net. All Rights Reserved
         </div>
         <div className="Protections">
-          This site is protected by reCAPTCHA and Joe Mama's Privacy Policy
+          This site is protected by reCAPTCHA and The Bee's Knees' Privacy Policy
         </div>
       </div>
     </footer>

@@ -40,9 +40,10 @@ const GameCard = ({fullgame, platform, passedGameData, setPassedGameData, basket
             </div>
 
             <div className = "gamedetails">
+                <div id="center-title">
                 <p id = "gametitle">{fullgame.name}</p>
-                <p id = "gameplatforms">{fullgame.name}</p>
-                <p id = "gamesummary">{fullgame.summary}</p>
+                </div>
+                { fullgame.summary && <p id = "gamesummary">{fullgame.summary}</p>}
                 <div className = "pricesection">
                     <p id = "gameprice">£{value}</p>
                     <button id = "addtobasket" onClick={viewGame}>View Details</button>

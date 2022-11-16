@@ -24,14 +24,20 @@ const Checkout = ({ basket, atb, user }) => {
           prices.push(parseInt(item.price));
           return (
             <div className="inner-box-upper">
+              <div id="flex-start">
               <p>{item.title}</p>
+              </div>
               <div id="vert-line" />
+              <div id="flex-end" > 
               <p>£{item.price}</p>
+              </div>
             </div>
           );
         })}
-
+        
+        <div id="thin-line-container">
         <div id="thin-line" />
+        </div>
         <div className="inner-box-lower">
           <div className="top-text">
             <h4>Estimated total</h4>

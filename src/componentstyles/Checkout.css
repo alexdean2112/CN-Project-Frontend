@@ -55,11 +55,17 @@ button {
   margin: auto;
 }
 
-/* #thin-line {
+#thin-line-container {
+  display: flex;
+  justify-content: center;
+}
+
+#thin-line {
   display: flex;
   border: 0.5px solid black;
   opacity: 40%;
-} */
+  width: 50vw;
+}
 
 .inner-box-lower {
   display: flex;
@@ -85,7 +91,18 @@ button {
 
 #vert-line {
   display: flex;
+  position: absolute;
   border: 0.5px solid black;
   height: 50px;
   opacity: 40%;
+}
+
+#flex-start {
+  display: flex;
+  width: 20vw;
+}
+
+#flex-end {
+  display: flex;
+  width: 4vw;
 }

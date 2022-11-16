@@ -22,7 +22,9 @@ const Checkout = ({ basket, atb, user }) => {
 
   return (
     <div>
+      <div className="shopping_cart">
       <h1>YOUR SHOPPING CART</h1>
+      </div>
       <div className="outer-box">
         {basket.map((item, index) => {
           prices.push(parseInt(item.price));

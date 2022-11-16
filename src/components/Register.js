@@ -43,17 +43,17 @@ export const Register = ({ setter }) => {
   return (
     <div className="form1">
       <form onSubmit={submitHandler}>
-        <label>
+        <label className="label">
           Username
           <input onChange={(e) => setUsername(e.target.value)} />
         </label>
 
-        <label>
+        <label className="label">
           Email
           <input onChange={(e) => setEmail(e.target.value)} />
         </label>
 
-        <label>
+        <label className="label">
           Password
           <input onChange={(e) => setPassword(e.target.value)} />
         </label>
@@ -84,17 +84,17 @@ export const Login = ({ setter, setMessage }) => {
     <div className="form2">
       <form onSubmit={submitHandler}>
 
-        <label>
+        <label className="label">
           Username
           <input onChange={(event) => setUsername(event.target.value)} />
         </label>
 
-        <label>
+        <label className="label">
           Email
           <input onChange={(event) => setEmail(event.target.value)} />
         </label>
 
-        <label>
+        <label className="label">
           Password
           <input onChange={(event) => setPassword(event.target.value)} />
         </label>

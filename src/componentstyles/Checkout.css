@@ -1,9 +1,12 @@
 h1 {
-  margin-left: 5%;
   margin-bottom: 3%;
   margin-top: 3%;
   text-decoration: underline;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+.shopping_cart h1 {
+  margin-left: 5%;
 }
 
 h4 {

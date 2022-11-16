@@ -2,7 +2,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    /* border: solid 5px white; */
     margin: 10px;
     height: 70vh;
 }
@@ -19,13 +18,13 @@
 
 }
 .gamecover{
-    /* border: solid 2px white; */
     border-radius: 15px;
     height: 80%;
     width: auto;
     margin-top: 70px;
     margin-left: 50px;
 }
+
 .gamecover img{
     display: flex;
     box-shadow: #08080b 0 10px 20px -10px;
@@ -33,33 +32,34 @@
     width: auto;
     border-radius: 15px;
 }
+
 .infoContainer{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /* border: solid 1px white; */
     margin-top: 70px;
     margin-right: 50px;
     height: 80%;
     width: 100%;
 }
+
 .info{
     display: flex;
     align-items: center;
     flex-direction: column;
-    /* border: solid 1px white; */
     border-radius: 15px;
     color: rgb(7, 7, 7);
     height: 95%;
     width: 95%;
 }
+
 .infoTag{
     display: flex;
     font-size: 10px;
     width: 90%;
-    /* border: solid 1px white; */
 }
+
 .description{
     border: solid 2px black;
     border-radius: 15px;
@@ -73,6 +73,7 @@
     flex-wrap: wrap;
     justify-content: center;
 }
+
 .addBasketBtn{
     background: #ffe600;
     border-radius: 10vw;
@@ -93,6 +94,7 @@
     word-break: break-word;
     border: solid 1px black;
 }
+
 .buttonContainer{
     display: flex;
     justify-content: flex-end;
@@ -101,5 +103,4 @@
     height: 10%;
     width: 90%;
     margin-bottom: 10px;
-    /* border: solid 1px white; */
 }

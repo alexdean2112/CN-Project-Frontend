@@ -1,16 +1,19 @@
 import Header from "./Header";
 import Footer from "./Footer";
-import { Register, Login } from "./Register";
+import { Register, Login, CorrectInfo } from "./Register";
+import { useState } from "react";
 import styled from "styled-components";
 
 const LoginPage = ({ setter, basket }) => {
+  const [message, setMessage] = useState();
   return (
     <div>
       <Header basket={basket} />
       <SuperContainer>
         <InputContainer>
           <Register setter={setter} />
-          <Login setter={setter} />
+          <CorrectInfo message={message} />
+          <Login setter={setter} setMessage={setMessage} />
         </InputContainer>
       </SuperContainer>
       <Footer />
@@ -32,7 +35,7 @@ const InputContainer = styled.div`
   display: flex;
   border: solid 5px black;
   background-color: rgb(0, 0, 0, 0.6);
-  align-item: center;
+  align-items: center;
   height: 60vh;
   width: 50vw;
   margin-bottom: 8vh;

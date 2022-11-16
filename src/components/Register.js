@@ -12,7 +12,7 @@ export const Register = ({ setter }) => {
 
   useEffect(() => {
     const getUser = async () => {
-      const response = await fetch(`http://localhost:5001/loginUser`, {
+      const response = await fetch(`${process.env.REACT_APP_REST_API}loginUser`, {
         method: "GET",
         headers: { "Content-Type": "application/json", Authorization: token },
       });
@@ -41,32 +41,33 @@ export const Register = ({ setter }) => {
   };
 
   return (
-    <form className="form" onSubmit={submitHandler}>
-      <label>
-        Username
-        <input onChange={(e) => setUsername(e.target.value)} />
-      </label>
+    <div className="form1">
+      <form onSubmit={submitHandler}>
+        <label>
+          Username
+          <input onChange={(e) => setUsername(e.target.value)} />
+        </label>
 
-      <label>
-        Email
-        <input onChange={(e) => setEmail(e.target.value)} />
-      </label>
+        <label>
+          Email
+          <input onChange={(e) => setEmail(e.target.value)} />
+        </label>
 
-      <label>
-        Password
-        <input onChange={(e) => setPassword(e.target.value)} />
-      </label>
+        <label>
+          Password
+          <input onChange={(e) => setPassword(e.target.value)} />
+        </label>
 
-      <button type="submit">Register account</button>
-    </form>
+        <button type="submit">Register account</button>
+      </form>
+    </div>
   );
 };
 
-export const Login = ({ setter }) => {
+export const Login = ({ setter, setMessage }) => {
   const [username, setUsername] = useState();
   const [email, setEmail] = useState();
   const [password, setPassword] = useState();
-  const [message, setMessage] = useState();
   const navigate = useNavigate();
 
   const submitHandler = async (event) => {
@@ -80,8 +81,8 @@ export const Login = ({ setter }) => {
   };
 
   return (
-    <div>
-      <form className="form" onSubmit={submitHandler}>
+    <div className="form2">
+      <form onSubmit={submitHandler}>
 
         <label>
           Username
@@ -98,13 +99,17 @@ export const Login = ({ setter }) => {
           <input onChange={(event) => setPassword(event.target.value)} />
         </label>
 
-        <button type="submit">Login</button>
+        <button id="relative-button" type="submit">Login</button>
 
       </form>
-
-      <div>
-        {message && <p>{message}</p>}
-      </div>
     </div>
   );
 };
+
+export const CorrectInfo = ({ message }) => {
+  return (
+      <div className="message-p">
+        {message && <p id="login-message">{message}</p>}
+      </div>
+  )
+}

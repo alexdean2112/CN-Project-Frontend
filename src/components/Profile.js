@@ -62,7 +62,7 @@ const Profile = ({ user, setter }) => {
         </div>
         <div className="test">
           <h1>User Details</h1>
-          <p>Username: Placeholder</p>
+          {user && <p>{`Username: ${user}`}</p>}
         </div>
       </div>
       <div className="orderContainer">

@@ -24,10 +24,8 @@ const Checkout = ({ basket, atb, user }) => {
           prices.push(parseInt(item.price));
           return (
             <div className="inner-box-upper">
-              <img src="" alt="gameimage" height="50" width="50" />
               <p>{item.title}</p>
               <div id="vert-line" />
-              <img src="" alt="platformimage" height="16" width="16" />
               <p>£{item.price}</p>
             </div>
           );

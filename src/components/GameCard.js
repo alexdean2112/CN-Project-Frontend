@@ -1,4 +1,4 @@
-import GodOfWar from "../assets/gow.jpg"
+import NoCover from "../assets/noimage.png"
 import "../componentstyles/GameCard.css"
 import {useState, useEffect} from "react"
 import {pullPlatform} from "../utils/gameUtils"
@@ -36,7 +36,7 @@ const GameCard = ({fullgame, platform, passedGameData, setPassedGameData, basket
     return (
         <div className = "gamecontainer">
             <div className = "image">
-                <img  id = "gamecover" alt="gamecover" src = {GodOfWar}></img>
+                <img  id = "gamecover" alt="gamecover" src = {NoCover}></img>
             </div>
 
             <div className = "gamedetails">

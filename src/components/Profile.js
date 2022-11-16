@@ -58,7 +58,7 @@ const Profile = ({ user, setter }) => {
     <div className="profileContainer">
       <div className="detailsContainer">
         <div className="imageContainer">
-          <img src={require("../assets/barrybee.png")} alt="placeholder" />
+          <img src={require("../assets/profilebanner.png")} alt="placeholder" />
         </div>
         <div className="test">
           <h1>User Details</h1>
@@ -66,7 +66,7 @@ const Profile = ({ user, setter }) => {
         </div>
       </div>
       <div className="orderContainer">
-          <h1>Orders</h1>
+          <h1 className="orderTitle">Orders</h1>
           {orders?.length > 0 ? (
             orders.map((item, index) => (
               <p>

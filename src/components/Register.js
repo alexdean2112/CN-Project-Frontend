@@ -12,7 +12,7 @@ export const Register = ({ setter }) => {
 
   useEffect(() => {
     const getUser = async () => {
-      const response = await fetch(`${process.env.REACT_APP_REST_API}loginUser`, {
+      const response = await fetch(`http://localhost:5001/loginUser`, {
         method: "GET",
         headers: { "Content-Type": "application/json", Authorization: token },
       });

@@ -5,7 +5,8 @@ import { useEffect } from "react";
 import { getCookie } from "../common";
 import { useNavigate } from "react-router-dom";
 
-const HomePage = ({ setter, user, passedGameData, setPassedGameData }) => {
+const HomePage = ({ setter, user, passedGameData, setPassedGameData, basket }) => {
+
   const navigate = useNavigate();
   useEffect(() => {
     const getUser = async () => {
@@ -29,11 +30,8 @@ const HomePage = ({ setter, user, passedGameData, setPassedGameData }) => {
 
   return (
     <div>
-      <Header user={user} setter={setter} />
-      <Mainpage
-        passedGameData={passedGameData}
-        setPassedGameData={setPassedGameData}
-      />
+      <Header user={user} setter={setter} basket = {basket} />
+      <Mainpage passedGameData={passedGameData} setPassedGameData={setPassedGameData}/>
       <Footer />
     </div>
   );

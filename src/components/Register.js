@@ -12,7 +12,7 @@ export const Register = ({ setter }) => {
 
   useEffect(() => {
     const getUser = async () => {
-      const response = await fetch(`${process.env.REACT_APP_REST_API}loginUser`, {
+      const response = await fetch(`http://localhost:5001/loginUser`, {
         method: "GET",
         headers: { "Content-Type": "application/json", Authorization: token },
       });
@@ -66,6 +66,7 @@ export const Login = ({ setter }) => {
   const [username, setUsername] = useState();
   const [email, setEmail] = useState();
   const [password, setPassword] = useState();
+  const [message, setMessage] = useState();
   const navigate = useNavigate();
 
   const submitHandler = async (event) => {
@@ -74,29 +75,36 @@ export const Login = ({ setter }) => {
     if (data.token) {
       navigate("/home");
     } else {
-      console.log("User details knackered.");
+      setMessage(data.error)
     }
   };
 
   return (
-    <form className="form" onSubmit={submitHandler}>
+    <div>
+      <form className="form" onSubmit={submitHandler}>
 
-      <label>
-        Username
-        <input onChange={(event) => setUsername(event.target.value)} />
-      </label>
+        <label>
+          Username
+          <input onChange={(event) => setUsername(event.target.value)} />
+        </label>
 
-      <label>
-        Email
-        <input onChange={(event) => setEmail(event.target.value)} />
-      </label>
+        <label>
+          Email
+          <input onChange={(event) => setEmail(event.target.value)} />
+        </label>
 
-      <label>
-        Password
-        <input onChange={(event) => setPassword(event.target.value)} />
-      </label>
+        <label>
+          Password
+          <input onChange={(event) => setPassword(event.target.value)} />
+        </label>
 
-      <button type="submit">Login</button>
-    </form>
+        <button type="submit">Login</button>
+
+      </form>
+
+      <div>
+        {message && <p>{message}</p>}
+      </div>
+    </div>
   );
 };

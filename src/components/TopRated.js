@@ -19,9 +19,15 @@ const TopRated = ({passedGameData, setPassedGameData, basket, setBasket}) => {
     return (
         <div className='gameresults'>
             <div className="toprated">
-            {gameData.map((game, index, platformData) => (
+                <div>{gameData.slice(0,5).map((game, index, platformData) => (
                     <GameCard id = "gameCard" key = {index} fullgame={game} platform={platformData} passedGameData={passedGameData} setPassedGameData={setPassedGameData} />
                 ))}
+                </div>
+                &nbsp; &nbsp; &nbsp; &nbsp;
+                <div>{gameData.slice(5,10).map((game, index, platformData) => (
+                    <GameCard id = "gameCard" key = {index} fullgame={game} platform={platformData} passedGameData={passedGameData} setPassedGameData={setPassedGameData} />
+                ))}
+                </div>
             </div>
         </div>
     )

@@ -16,6 +16,10 @@ const Checkout = ({ basket, atb, user }) => {
     atb([]);
   };
 
+  const clearBasket = () => {
+    atb([])
+  }
+
   return (
     <div>
       <h1>YOUR SHOPPING CART</h1>
@@ -24,16 +28,20 @@ const Checkout = ({ basket, atb, user }) => {
           prices.push(parseInt(item.price));
           return (
             <div className="inner-box-upper">
-              <img src="" alt="gameimage" height="50" width="50" />
+              <div id="flex-start">
               <p>{item.title}</p>
+              </div>
               <div id="vert-line" />
-              <img src="" alt="platformimage" height="16" width="16" />
+              <div id="flex-end" > 
               <p>£{item.price}</p>
+              </div>
             </div>
           );
         })}
-
+        
+        <div id="thin-line-container">
         <div id="thin-line" />
+        </div>
         <div className="inner-box-lower">
           <div className="top-text">
             <h4>Estimated total</h4>
@@ -41,6 +49,7 @@ const Checkout = ({ basket, atb, user }) => {
           </div>
           <p id="center">To finalise your order, select checkout below.</p>
           <div id="purchase">
+            <button id="give-me-space" onClick={clearBasket} >CANCEL ORDER</button>
             <button id="padded-button" onClick={checkoutHandler}>
               CHECKOUT
             </button>

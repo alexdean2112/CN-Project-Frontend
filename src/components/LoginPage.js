@@ -33,7 +33,8 @@ const SuperContainer = styled.div`
 
 const InputContainer = styled.div`
   display: flex;
-  border: solid 5px black;
+  border: solid 5px white;
+  box-shadow: 3px 3px black;
   background-color: rgb(0, 0, 0, 0.6);
   align-items: center;
   height: 60vh;

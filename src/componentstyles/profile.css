@@ -1,3 +1,9 @@
+body{
+  text-shadow: 2px 2px black;
+  color: white;
+
+}
+
 .profileContainer {
   display: flex;
   flex-direction: column;
@@ -5,12 +11,12 @@
   align-items: center;
   height: 90vh;
   width: 80vw;
-  border: solid black 5px;
+  border: solid white 5px;
   background-color: rgba(78, 78, 78, 0.8);
   box-shadow: 3px 3px rgb(0, 0, 0);
   margin: 5vh 0 5vh 10vw;
   border-radius: 15px;
-  color: white;
+
 }
 
 .detailsContainer {
@@ -43,6 +49,7 @@
   width: auto;
   margin-top: 25px;
   border: #c7b300 thick solid;
+  box-shadow: 3px 3px black;
 }
 
 .test {
@@ -169,10 +176,15 @@
 
 .updatebutton {
   width: 25vw;
+  box-shadow: 4px 6px black;
 }
 
 .deletebutton{
   height: 7vh;
+}
+
+.deletebutton:hover {
+  background-color:rgb(189, 58, 58);
 }
 
 

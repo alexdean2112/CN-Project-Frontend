@@ -7,7 +7,7 @@
 button {
   background: #ffe600;
   border-radius: 999px;
-  box-shadow: #08080b 0 10px 20px -10px;
+  box-shadow: 4px 6px black;
   box-sizing: border-box;
   color: #000000;
   cursor: pointer;

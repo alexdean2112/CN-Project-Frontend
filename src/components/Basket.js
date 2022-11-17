@@ -122,6 +122,7 @@ const Sidecontent = styled.div`
 `;
 const SideTitle = styled.div`
   font-size: 12px;
+  margin-left:0.5vw;
 `;
 const Items = styled.div`
   // border: solid 1px white;

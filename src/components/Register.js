@@ -55,7 +55,7 @@ export const Register = ({ setter }) => {
 
         <label className="label">
           Password
-          <input onChange={(e) => setPassword(e.target.value)} />
+          <input type="password" onChange={(e) => setPassword(e.target.value)} />
         </label>
 
         <button type="submit">Register account</button>
@@ -96,7 +96,7 @@ export const Login = ({ setter, setMessage }) => {
 
         <label className="label">
           Password
-          <input onChange={(event) => setPassword(event.target.value)} />
+          <input type="password" onChange={(event) => setPassword(event.target.value)} />
         </label>
 
         <button id="relative-button" type="submit">Login</button>

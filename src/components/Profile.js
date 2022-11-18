@@ -139,6 +139,7 @@ const Profile = ({ user, setter }) => {
               <label className="profile_label">
                 <br></br>
                 <input
+                  type="password"
                   className="updateinput"
                   placeholder="Password ..."
                   onChange={(event) => setPassword(event.target.value)}
